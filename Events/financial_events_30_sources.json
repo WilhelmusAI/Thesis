@@ -1,0 +1,2690 @@
+{
+  "dataset_file": "financial_events_30.json",
+  "dataset_sha256": "168b8d9df4de82a836f2ad49179b9c780a68ea391f24fe4af3fe243669395744",
+  "compiled_on": "2026-10-17",
+  "purpose": "Source and construction audit. This file is for the researcher, not part of the model input.",
+  "schema": {
+    "container": "JSON array of 30 objects",
+    "fields": {
+      "number": "integer from 1 to 30",
+      "Title": "dated event title",
+      "description": "900–1,000 words of event and preceding context"
+    }
+  },
+  "word_count_method": "Python len(description.split()); title is excluded.",
+  "selection_period": {
+    "earliest_permitted_event": "2026-04-17",
+    "latest_permitted_event": "2026-07-17"
+  },
+  "method_notes": [
+    "The attached thesis proposal specifies 20 events, while this requested dataset contains 30. If all 30 are used, update the proposal and experimental run count accordingly.",
+    "Descriptions use individually specified information cutoffs. The event itself and facts already available by that cutoff are inputs, not forecast targets.",
+    "Restatements of information already supplied, including announced plans and official forecasts, should not be credited as newly generated supported predictions.",
+    "Announced plans, proposals, guidance and official projections are attributed as such; future scheduled implementation is not presented as a completed outcome.",
+    "The selection period is after the March 2026 model-upload dates listed in the proposal. Upload dates are not verified training-data cutoffs. Record immutable model revisions and hashes.",
+    "The July 17 selection endpoint leaves at least three calendar months before compilation. This does not establish an observation window; preregister the evaluation horizon before generation or marking.",
+    "Events share countries, institutions, energy shocks and other background. Treating all 30 as statistically independent would be inappropriate.",
+    "Give each event a fresh independent prompt context. Later event inputs can contain developments that are future outcomes of earlier events.",
+    "Sources support event inputs and prior context. This companion file does not provide labels or subsequent outcome evidence. Preserve source snapshots and adjudicate ambiguous or changed web pages before freezing the experimental dataset.",
+    "Numbering groups related subjects for navigation and is not a chronological order or a random experimental order."
+  ],
+  "validation": {
+    "event_count": 30,
+    "total_description_words": 28146,
+    "minimum_description_words": 902,
+    "maximum_description_words": 989,
+    "exact_three_field_schema": true,
+    "source_references": 219,
+    "unique_source_urls": 219
+  },
+  "events": [
+    {
+      "number": 1,
+      "event_date": "2026-06-11",
+      "information_cutoff": "2026-06-11T23:59:59+02:00",
+      "category": "Monetary policy / euro area",
+      "sources": [
+        {
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260611~4d41bd5e83.en.html",
+          "title": "Monetary policy decisions",
+          "published_date": "2026-06-11",
+          "role": "Primary event announcement",
+          "claims_supported": [
+            "Paragraphs 1–2: rate decision, effective date, portfolios and policy instruments."
+          ]
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-02062026-ap",
+          "title": "Euro area annual inflation up to 3.2%",
+          "published_date": "2026-06-02",
+          "role": "Contemporaneous inflation flash estimate",
+          "claims_supported": [
+            "Paragraphs 3–4: component inflation, basket weights and national rates."
+          ]
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-05062026-ap",
+          "title": "GDP down by 0.2% and employment up by 0.1% in the euro area",
+          "published_date": "2026-06-05",
+          "role": "Latest GDP vintage at event cutoff",
+          "claims_supported": [
+            "Paragraphs 5–6: GDP revision, countries, expenditure contributions and employment."
+          ]
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/3-01062026-ap",
+          "title": "Euro area unemployment at 6.3%",
+          "published_date": "2026-06-01",
+          "role": "Labour-market context",
+          "claims_supported": [
+            "Paragraph 7: unemployment and youth unemployment; statistical definition."
+          ]
+        },
+        {
+          "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.pr260428~6b156107c1.en.html",
+          "title": "April 2026 euro area bank lending survey",
+          "published_date": "2026-04-28",
+          "role": "Credit availability context",
+          "claims_supported": [
+            "Paragraph 8: credit standards, survey balances and rejections."
+          ]
+        },
+        {
+          "url": "https://www.ecb.europa.eu/press/press_conference/monetary-policy-statement/2026/html/ecb.is260611~372040d313.en.html",
+          "title": "Monetary policy statement with Q&A",
+          "published_date": "2026-06-11",
+          "role": "Contemporaneous public explanation",
+          "claims_supported": [
+            "Paragraph 9: financing costs, credit growth, wage pressures and expectations."
+          ]
+        },
+        {
+          "url": "https://www.ecb.europa.eu/press/projections/html/ecb.projections202606_eurosystemstaff~a495110f8d.en.html",
+          "title": "Eurosystem staff macroeconomic projections for the euro area, June 2026",
+          "published_date": "2026-06-11",
+          "role": "Conditional forecasts available on event day",
+          "claims_supported": [
+            "Paragraph 10: baseline projections, technical cutoff and alternative scenarios."
+          ]
+        }
+      ],
+      "causal_independence": {
+        "independent_event_identity": true,
+        "statistically_independent_observation": false,
+        "shared_exposure": "Middle East conflict, energy prices and global financial conditions overlap with the other monetary decisions. Distinct announcement dates and jurisdictions do not imply independent shocks."
+      },
+      "limitations": [
+        "June 11 statement information and public press conference are included; subsequent ECB accounts and later Eurostat revisions are excluded.",
+        "The June projections used an earlier data cutoff; the description separately uses the revised June 5 GDP estimate that was public before the event.",
+        "Official forecasts are attributed input information, not outcome labels."
+      ],
+      "information_cutoff_timezone": "Europe/Berlin",
+      "information_cutoff_utc": "2026-06-11T21:59:59+00:00",
+      "Title": "2026-06-11 — European Central Bank raises all three policy rates by 25 basis points",
+      "description_word_count": 941,
+      "description_sha256": "ed8f3dda3c826bed4d255eacd55f590d724e5d50fd60e417655a0a6fe4d0ea90",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Unnecessary investment-outcome caveat. It does not document an event-day fact beyond the preceding institutional description. This is not a factual error or later-outcome leak."
+      ]
+    },
+    {
+      "number": 2,
+      "event_date": "2026-06-17",
+      "information_cutoff": "2026-06-17T23:59:59-04:00",
+      "category": "Monetary policy / United States",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+          "title": "Federal Reserve issues FOMC statement",
+          "published_date": "2026-06-17",
+          "role": "Primary event announcement",
+          "claims_supported": [
+            "Paragraphs 1 and 3: policy decision, vote, reserves framework and economic assessment."
+          ]
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/other20260522a.htm",
+          "title": "Kevin Warsh takes oath of office as chairman and a member of the Board of Governors",
+          "published_date": "2026-05-22",
+          "role": "Leadership transition context",
+          "claims_supported": [
+            "Paragraph 2: nomination, confirmation, offices and terms."
+          ]
+        },
+        {
+          "url": "https://www.bls.gov/news.release/archives/empsit_06052026.htm",
+          "title": "Employment Situation — May 2026",
+          "published_date": "2026-06-05",
+          "role": "Contemporaneous employment vintage",
+          "claims_supported": [
+            "Paragraph 4: payrolls, revisions available then, wages and hours."
+          ]
+        },
+        {
+          "url": "https://www.bls.gov/news.release/archives/cpi_06102026.htm",
+          "title": "Consumer Price Index — May 2026",
+          "published_date": "2026-06-10",
+          "role": "Contemporaneous CPI release",
+          "claims_supported": [
+            "Paragraphs 5–6: headline, components, monthly changes and underlying measure."
+          ]
+        },
+        {
+          "url": "https://www.bea.gov/sites/default/files/2026-05/pi0426.pdf",
+          "title": "Personal Income and Outlays, April 2026",
+          "published_date": "2026-05-28",
+          "role": "Original archived PCE and income release",
+          "claims_supported": [
+            "Paragraph 7: PCE inflation, spending, income and saving."
+          ]
+        },
+        {
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
+          "title": "June 17, 2026: FOMC Projections materials, accessible version",
+          "published_date": "2026-06-17",
+          "role": "Conditional participant forecasts",
+          "claims_supported": [
+            "Paragraph 8: medians, participant count and forecast definitions."
+          ]
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a1.htm",
+          "title": "Implementation Note issued June 17, 2026",
+          "published_date": "2026-06-17",
+          "role": "Operational instructions",
+          "claims_supported": [
+            "Paragraph 9: administered rates, maturity limits and reinvestment policy."
+          ]
+        },
+        {
+          "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260617.pdf",
+          "title": "Transcript of Chairman Warsh’s Press Conference — June 17, 2026",
+          "published_date": "2026-06-17",
+          "role": "Public event-day remarks",
+          "claims_supported": [
+            "Paragraphs 1 and 10: communication change, task forces, target and sectoral restraint."
+          ],
+          "availability_note": "The transcript documents remarks spoken publicly at the June 17 press conference; the transcript file itself may have been posted later."
+        }
+      ],
+      "causal_independence": {
+        "independent_event_identity": true,
+        "statistically_independent_observation": false,
+        "shared_exposure": "Middle East conflict, energy prices and global financial conditions overlap with the other monetary decisions. Distinct announcement dates and jurisdictions do not imply independent shocks."
+      },
+      "limitations": [
+        "Uses the public June 17 conference, not subsequently released closed-meeting minutes. Transcript is evidence for remarks spoken publicly on event day.",
+        "BEA original May 28 PDF is used to avoid relying on later online data revisions.",
+        "May payroll estimates are the June 5 vintage; July payroll revisions are excluded.",
+        "The dot plot is conditional participant information and is not treated as a promised FOMC rate path."
+      ],
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-06-18T03:59:59+00:00",
+      "Title": "2026-06-17 — Federal Reserve holds rates at Kevin Warsh’s first policy meeting as chair",
+      "description_word_count": 974,
+      "description_sha256": "cc57dd48c997bd5c3de8588ca3142309698180049e2be87efe41c78de0edf05c",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Fourth-quarter changes can be read as quarter-on-quarter changes. The SEP defines growth and inflation from Q4 of the preceding year to Q4 of the projected year."
+      ]
+    },
+    {
+      "number": 3,
+      "event_date": "2026-06-16",
+      "information_cutoff": "2026-06-16T23:59:59+09:00",
+      "category": "Monetary policy / Japan",
+      "sources": [
+        {
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616a.pdf",
+          "title": "Change in the Guideline for Money Market Operations",
+          "published_date": "2026-06-16",
+          "role": "Primary event announcement",
+          "claims_supported": [
+            "Paragraph 1 and end of paragraph 9: vote, rates, implementation and assessment."
+          ]
+        },
+        {
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260428a.pdf",
+          "title": "Statement on Monetary Policy",
+          "published_date": "2026-04-28",
+          "role": "Prior public policy decision",
+          "claims_supported": [
+            "Paragraph 2: previous vote and named dissenters."
+          ]
+        },
+        {
+          "url": "https://www.boj.or.jp/en/mopo/outlook/gor2604b.pdf",
+          "title": "Outlook for Economic Activity and Prices — April 2026",
+          "published_date": "2026-04-30",
+          "role": "Earlier official forecast context",
+          "claims_supported": [
+            "Paragraph 3: fiscal-year forecasts and comparison with January."
+          ]
+        },
+        {
+          "url": "https://www.jil.go.jp/english/estatis/esaikin/2026/e202605.html",
+          "title": "Recent Statistical Survey Reports — May 2026",
+          "published_date": null,
+          "role": "Public research agency digest of dated official releases",
+          "claims_supported": [
+            "Paragraphs 4–5: national and Tokyo CPI, unemployment and job openings."
+          ],
+          "availability_note": "The digest does not display an exact publication day. It reproduces official statistics released May 22 and May 29, 2026, before the June 16 event cutoff."
+        },
+        {
+          "url": "https://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2605.pdf",
+          "title": "Monthly Report on the Corporate Goods Price Index — May 2026",
+          "published_date": "2026-06-10",
+          "role": "Contemporaneous producer and import prices",
+          "claims_supported": [
+            "Paragraph 6: domestic producer index and import-price measurements."
+          ]
+        },
+        {
+          "url": "https://www.esri.cao.go.jp/en/sna/data/sokuhou/files/2026/qe261_2/pdf/gaiyou2612_e.pdf",
+          "title": "Quarterly Estimates of GDP for January–March 2026 — Second Preliminary Estimates",
+          "published_date": "2026-06-08",
+          "role": "Latest national accounts vintage before event",
+          "claims_supported": [
+            "Paragraphs 7–8: GDP, investment revision, consumption and trade."
+          ]
+        },
+        {
+          "url": "https://www5.cao.go.jp/keizai3/getsurei-e/2026may.html",
+          "title": "Monthly Economic Report Executive Summary — May 2026",
+          "published_date": "2026-05-26",
+          "role": "Contemporaneous government assessment",
+          "claims_supported": [
+            "Paragraph 9: economic assessment, emergency fuel measures and supply response."
+          ]
+        },
+        {
+          "url": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k260616b.pdf",
+          "title": "Plan for the Outright Purchases of Japanese Government Bonds",
+          "published_date": "2026-06-16",
+          "role": "Additional instrument announced same day",
+          "claims_supported": [
+            "Paragraph 10: announced purchases and retained flexibility."
+          ]
+        },
+        {
+          "url": "https://www.mhlw.go.jp/stf/newpage_73416.html",
+          "title": "General Employment Placement Situation for April 2026 — Ministry of Health, Labour and Welfare",
+          "published_date": "2026-05-29",
+          "role": "Original dated statistical release, supplementing the JILPT digest",
+          "claims_supported": "April 2026 seasonally adjusted active job-openings-to-applicants ratio of 1.18, unchanged from March. Original Japanese release dated 29 May 2026."
+        },
+        {
+          "url": "https://www.e-stat.go.jp/en/stat-search/files?stat_infid=000040454996",
+          "title": "2020-Base Consumer Price Index: April 2026 national monthly tables",
+          "published_date": "2026-05-22",
+          "role": "Original official statistical record and spreadsheet",
+          "claims_supported": "April national CPI values and original May 22 release date; independently checked against the e-Stat spreadsheet."
+        },
+        {
+          "url": "https://www.e-stat.go.jp/en/stat-search/files?stat_infid=000040454999",
+          "title": "2020-Base Consumer Price Index: Tokyo subgroup monthly table, May 2026 preliminary row",
+          "published_date": "2026-05-29",
+          "role": "Original official statistical record and spreadsheet",
+          "claims_supported": "May Tokyo preliminary headline, core and excluding-fresh-food-and-energy inflation; dated e-Stat record, spreadsheet May row and preliminary-data footnote."
+        }
+      ],
+      "causal_independence": {
+        "independent_event_identity": true,
+        "statistically_independent_observation": false,
+        "shared_exposure": "Middle East conflict, energy prices and global financial conditions overlap with the other monetary decisions. Distinct announcement dates and jurisdictions do not imply independent shocks."
+      },
+      "limitations": [
+        "National CPI covers April; Tokyo May is explicitly a regional preliminary reading. National May CPI is excluded.",
+        "The second preliminary GDP release is the June 8 vintage, not later revisions.",
+        "April and June meeting minutes published after the event are not used.",
+        "Bond purchase amounts are announced plans, not realised post-event purchases.",
+        "The JILPT monthly digest has no proven publication day. Original e-Stat national CPI and MHLW job-ratio releases are corroborated; the original Tokyo CPI table is also corroborated, but the dated original April Labour Force Survey table was not independently recovered. Those remaining values agree across the English and Japanese JILPT digests, which identify May 29 as the underlying release date."
+      ],
+      "information_cutoff_timezone": "Asia/Tokyo",
+      "information_cutoff_utc": "2026-06-16T14:59:59+00:00",
+      "Title": "2026-06-16 — Bank of Japan raises its overnight rate target to 1%",
+      "description_word_count": 985,
+      "description_sha256": "9f46d18975017315e36f3cb401a67ac72cb2a01a0212130de5965c3a0695d615",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "This unadjusted employee count follows two seasonally adjusted unemployment measures without explicitly marking the change in adjustment basis.",
+        "Added the original dated e-Stat CPI record to corroborate the monthly digest.",
+        "Added original May 29 e-Stat Tokyo CPI table."
+      ]
+    },
+    {
+      "number": 4,
+      "event_date": "2026-05-05",
+      "information_cutoff": "2026-05-05T23:59:59+10:00",
+      "category": "Monetary policy / Australia",
+      "sources": [
+        {
+          "url": "https://www.rba.gov.au/media-releases/2026/mr-26-12.html",
+          "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+          "published_date": "2026-05-05",
+          "role": "Primary event announcement",
+          "claims_supported": [
+            "Paragraph 1 and paragraph 10 financial-condition sentence: decision and assessment."
+          ]
+        },
+        {
+          "url": "https://www.rba.gov.au/media-releases/2026/mr-26-08.html",
+          "title": "Statement by the Monetary Policy Board: Monetary Policy Decision",
+          "published_date": "2026-03-17",
+          "role": "Prior decision and voting context",
+          "claims_supported": [
+            "Paragraph 2: previous cash rate and vote."
+          ]
+        },
+        {
+          "url": "https://www.abs.gov.au/media-centre/media-releases/cpi-rose-46-year-march-2026",
+          "title": "CPI rose 4.6% in the year to March 2026",
+          "published_date": "2026-04-29",
+          "role": "Contemporaneous ABS inflation release",
+          "claims_supported": [
+            "Paragraphs 3–4: headline, fuel, housing and trimmed-mean measures."
+          ]
+        },
+        {
+          "url": "https://www.abs.gov.au/media-centre/media-releases/unemployment-rate-remains-43-march",
+          "title": "Unemployment rate remains at 4.3% in March",
+          "published_date": "2026-04-16",
+          "role": "Labour-market information available before event",
+          "claims_supported": [
+            "Paragraph 5: employment composition, unemployment, participation and hours."
+          ]
+        },
+        {
+          "url": "https://www.abs.gov.au/media-centre/media-releases/australian-economy-grew-08-december-quarter",
+          "title": "Australian economy grew 0.8% in the December quarter",
+          "published_date": "2026-03-04",
+          "role": "Latest national-accounts release available then",
+          "claims_supported": [
+            "Paragraphs 6–7: output, industries, investment, household incomes and saving."
+          ]
+        },
+        {
+          "url": "https://www.rba.gov.au/publications/smp/2026/may/in-depth-the-impact-of-higher-global-energy-prices-on-the-australian-economy.html",
+          "title": "Statement on Monetary Policy — May 2026, chapter 4",
+          "published_date": "2026-05-05",
+          "role": "Energy exposure context",
+          "claims_supported": [
+            "Paragraph 8: net energy trade, refined fuel imports and business diesel use."
+          ]
+        },
+        {
+          "url": "https://www.rba.gov.au/publications/smp/2026/may/outlook.html",
+          "title": "Statement on Monetary Policy — May 2026, chapter 3",
+          "published_date": "2026-05-05",
+          "role": "Conditional forecasts available event day",
+          "claims_supported": [
+            "Paragraph 9: forecast table, assumptions and forecast finalisation date."
+          ]
+        },
+        {
+          "url": "https://www.rba.gov.au/speeches/2026/mc-gov-2026-05-05.html",
+          "title": "Media Conference: Monetary Policy Decision — 5 May 2026",
+          "published_date": "2026-05-05",
+          "role": "Public event-day explanation",
+          "claims_supported": [
+            "Paragraph 10: credit availability, lending margins and supply constraints."
+          ]
+        }
+      ],
+      "causal_independence": {
+        "independent_event_identity": true,
+        "statistically_independent_observation": false,
+        "shared_exposure": "Middle East conflict, energy prices and global financial conditions overlap with the other monetary decisions. Distinct announcement dates and jurisdictions do not imply independent shocks."
+      },
+      "limitations": [
+        "Monthly trimmed-mean annual inflation is distinguished from quarterly measures; they are not interchangeable.",
+        "Official forecast unemployment is 4.3% at end-2026 and 4.7% by mid-2028. A conflicting Reuters summary suggesting 4.7% at end-2026 was rejected in favour of the official table.",
+        "April labour-market data and later 2026 budgets are excluded."
+      ],
+      "information_cutoff_timezone": "Australia/Sydney",
+      "information_cutoff_utc": "2026-05-05T13:59:59+00:00",
+      "Title": "2026-05-05 — Reserve Bank of Australia raises the cash rate to 4.35%",
+      "description_word_count": 989,
+      "description_sha256": "b7dab3238cbe5026eb4b4662259205fcda99a33f10563099f0d94ec532b7f980",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The 4.8% projection is year-ended inflation. After discussion of both monthly and quarterly inflation, omitting the annual comparison could cause a mistaken quarter-on-quarter reading."
+      ]
+    },
+    {
+      "number": 5,
+      "event_date": "2026-05-28",
+      "information_cutoff": "2026-05-28T23:59:59+02:00",
+      "category": "Monetary policy / South Africa",
+      "sources": [
+        {
+          "url": "https://www.resbank.co.za/en/home/publications/publication-detail-pages/statements/monetary-policy-statements/2026/may",
+          "title": "Statement of the Monetary Policy Committee — May 2026",
+          "published_date": "2026-05-28",
+          "role": "Primary event announcement",
+          "claims_supported": [
+            "Paragraphs 1 and 9: policy action, vote, forecasts and observed conditions."
+          ]
+        },
+        {
+          "url": "https://www.resbank.co.za/en/home/publications/publication-detail-pages/statements/monetary-policy-statements/2025/november",
+          "title": "Statement of the Monetary Policy Committee — November 2025",
+          "published_date": "2025-11-20",
+          "role": "Earlier rate decision and target-framework explanation",
+          "claims_supported": [
+            "Paragraph 2: previous reduction, target and tolerance-band interpretation."
+          ]
+        },
+        {
+          "url": "https://www.resbank.co.za/content/dam/sarb/publications/reviews/monetary-policy-review/2026/april.pdf",
+          "title": "Monetary Policy Review — April 2026",
+          "published_date": "2026-04-21",
+          "role": "Operating-framework and earlier policy context",
+          "claims_supported": [
+            "Paragraph 3 and framework portions of paragraph 10: terminology and implementation."
+          ]
+        },
+        {
+          "url": "https://www.statssa.gov.za/?p=19553",
+          "title": "Fuel prices lead inflation higher",
+          "published_date": "2026-05-20",
+          "role": "Contemporaneous official inflation release commentary",
+          "claims_supported": [
+            "Paragraphs 4–5: fuel, transport, food and health-insurance price observations."
+          ]
+        },
+        {
+          "url": "https://www.statssa.gov.za/?p=19414",
+          "title": "Economic wrap-up for March 2026",
+          "published_date": "2026-04-02",
+          "role": "Official historical growth and industry context",
+          "claims_supported": [
+            "Paragraph 6: GDP history and construction decline."
+          ]
+        },
+        {
+          "url": "https://www.sanews.gov.za/south-africa/official-unemployment-rises-marginally",
+          "title": "Official unemployment rises marginally",
+          "published_date": "2026-05-12",
+          "role": "Government report of the same-day Stats SA survey",
+          "claims_supported": [
+            "Paragraph 7: employment, unemployment, youth and industries."
+          ]
+        },
+        {
+          "url": "https://www.gov.za/2026BudgetSpeech",
+          "title": "Minister Enoch Godongwana: 2026 Budget Speech",
+          "published_date": "2026-02-25",
+          "role": "Pre-event fiscal and structural context",
+          "claims_supported": [
+            "Paragraph 8: budget estimates, tax proposals and identified constraints."
+          ]
+        }
+      ],
+      "causal_independence": {
+        "independent_event_identity": true,
+        "statistically_independent_observation": false,
+        "shared_exposure": "Middle East conflict, energy prices and global financial conditions overlap with the other monetary decisions. Distinct announcement dates and jurisdictions do not imply independent shocks."
+      },
+      "limitations": [
+        "The primary statement page lacks a prominent publication date; the official May 28 MPC webcast listing independently identifies the announcement date.",
+        "Budget figures are explicitly estimates from February, not final fiscal outcomes.",
+        "The next expectations survey was outstanding at the event; no later survey results are incorporated.",
+        "No subsequent June GDP, CPI or rate decisions are used."
+      ],
+      "information_cutoff_timezone": "Africa/Johannesburg",
+      "information_cutoff_utc": "2026-05-28T21:59:59+00:00",
+      "Title": "2026-05-28 — South African Reserve Bank raises its policy rate to 7%",
+      "description_word_count": 932,
+      "description_sha256": "ddac0a10ab75643cf5464a6e0ff9034254b70e0b91b69a79aec469ab3ac3255a",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Generic textbook exposition repeats P1–P3 and adds little event-specific information. No factual defect or later outcome is present."
+      ]
+    },
+    {
+      "number": 6,
+      "event_date": "2026-04-17",
+      "information_cutoff": "2026-04-17T23:59:59+00:00",
+      "category": "Energy / maritime security / oil and LNG",
+      "sources": [
+        {
+          "url": "https://www.un.org/sg/en/content/sg/statements/2026-04-16/statement-attributable-the-spokesperson-for-the-secretary-general-lebanon-and-israel",
+          "title": "Statement attributable to the Spokesperson for the Secretary-General – on Lebanon and Israel",
+          "published_date": "2026-04-16",
+          "role": "Primary diplomatic background",
+          "claims_supported": "Ten-day Israel-Lebanon ceasefire, US facilitation, Blue Line communities and resolution 1701."
+        },
+        {
+          "url": "https://www.iea.org/reports/oil-market-report-april-2026",
+          "title": "Oil Market Report - April 2026",
+          "published_date": "2026-04-14",
+          "role": "Primary pre-event energy-market snapshot",
+          "claims_supported": "March global supply decline and level; early-April Hormuz shipments; March inventory drawdowns and regional accumulation."
+        },
+        {
+          "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+          "title": "Amid regional conflict, the Strait of Hormuz remains critical oil chokepoint",
+          "published_date": "2025-06-16",
+          "role": "Primary historical trade baseline",
+          "claims_supported": "2024 oil and LNG transit shares, route geography and historical Asian destination shares."
+        },
+        {
+          "url": "https://www.imo.org/en/mediacentre/secretarygeneral/pages/statement-summit-uk-france-strait-of-hormuz.aspx",
+          "title": "France-UK: Summit on Freedom of Navigation in the Strait of Hormuz",
+          "published_date": "2026-04-17",
+          "role": "Primary same-day maritime conditions",
+          "claims_supported": "Approximately 20,000 trapped seafarers and nearly 2,000 vessels; 1968 traffic separation scheme; evacuation planning, hazards and insurance."
+        },
+        {
+          "url": "https://www.ics-shipping.org/statement/statement-from-the-international-chamber-of-shipping-related-to-the-reopening-of-the-strait-of-hormuz/",
+          "title": "Statement from the International Chamber of Shipping related to the reopening of the Strait of Hormuz",
+          "published_date": "2026-04-17",
+          "role": "Primary industry response",
+          "claims_supported": "Operational uncertainty, coordinated return to navigation and crews confined for more than seven weeks."
+        },
+        {
+          "url": "https://www.reuters.com/world/middle-east/ships-crossing-hormuz-need-irgc-ok-unfreezing-assets-part-deal-iran-official-2026-04-17/",
+          "title": "Ships crossing Hormuz need OK from IRGC, unfreezing funds part of deal, Iran official says",
+          "published_date": "2026-04-17",
+          "role": "Contemporary conditions and qualifications",
+          "claims_supported": "April 17 reopening announcement and Lebanon-ceasefire context; Iranian coordination requirements, military-vessel exclusion and continuing US blockade. Initial publication 15:16 UTC; displayed update remains April 17."
+        }
+      ],
+      "limitations": [
+        "The event is an announcement of conditional access, not confirmed normalization of shipping.",
+        "End-of-day cutoff permits same-day official industry statements but excludes all later passage outcomes and price responses.",
+        "The GOV.UK joint statement was not used because its current page includes additions after 17 April.",
+        "A separate Reuters oil-price article first published April 17 but updated April 18 was removed from input evidence. The retained April 17 Reuters report and ICS statement independently support the announcement."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-04-17T23:59:59+00:00",
+      "Title": "2026-04-17 — Iran announces conditional reopening of the Strait of Hormuz to commercial shipping",
+      "description_word_count": 917,
+      "description_sha256": "869eeeb2701bf59871830dd20886c48ad0a4e0f6a9d2b01effc3be742ab38424",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Removed a Reuters page whose current version was updated April 18, after the April 17 cutoff; contemporaneous Reuters and ICS evidence remains."
+      ]
+    },
+    {
+      "number": 7,
+      "event_date": "2026-04-28",
+      "information_cutoff": "2026-04-28T23:59:59+00:00",
+      "category": "Oil / producer coordination / national energy policy",
+      "sources": [
+        {
+          "url": "https://www.wam.ae/en/article/bzxzuh7-uae-announces-decision-exit-opec-opec%2B",
+          "title": "UAE announces decision to exit OPEC & OPEC+",
+          "published_date": "2026-04-28",
+          "role": "Primary event announcement",
+          "claims_supported": "Announcement on 28 April, effective date 1 May, policy rationale, membership history, official intention of measured additional production."
+        },
+        {
+          "url": "https://www.opec.org/pr-detail/597-5-april-2026.html",
+          "title": "Saudi Arabia, Russia, Iraq, UAE, Kuwait, Kazakhstan, Algeria, and Oman adjust production and reaffirm commitment to market stability",
+          "published_date": "2026-04-05",
+          "role": "Primary preceding producer agreement",
+          "claims_supported": "Eight participants; 206,000 b/d May adjustment; April 2023 voluntary cuts; flexibility; compensation and JMMC monitoring."
+        },
+        {
+          "url": "https://www.adnoc.ae/en/news-and-media/press-releases/2025/uae-president-chairs-adnoc-board-of-directors-meeting-at-habshan-complex/",
+          "title": "UAE President Chairs ADNOC Board of Directors Meeting at Habshan Complex",
+          "published_date": "2025-11-24",
+          "role": "Primary dated investment background",
+          "claims_supported": "US$150 billion 2026-2030 capex; 120 billion barrel oil reserves and 297 tscf gas reserves; Ghasha operating company and diversified development program."
+        },
+        {
+          "url": "https://www.mediaoffice.abudhabi/en/energy/uae-president-chairs-adnoc-board-of-directors-meeting/",
+          "title": "UAE President Chairs ADNOC Board of Directors Meeting",
+          "published_date": "2022-11-28",
+          "role": "Primary dated capacity target",
+          "claims_supported": "Board brought forward the five-million-barrel-per-day capacity target to 2027 from 2030."
+        },
+        {
+          "url": "https://www.imo.org/en/mediacentre/pressbriefings/pages/no-safe-transit-through-hormuz-imo-secretary-general.aspx",
+          "title": "No safe transit through Strait of Hormuz: IMO Secretary-General",
+          "published_date": "2026-04-24",
+          "role": "Primary pre-event maritime status",
+          "claims_supported": "Trapped seafarers, seizures, mines and attacks, unsafe passage and evacuation coordination."
+        },
+        {
+          "url": "https://www.reuters.com/business/energy/alternative-routes-middle-east-oil-gas-due-hormuz-disruption-2026-04-21/",
+          "title": "Alternative routes for Middle East oil and gas due to Hormuz disruption",
+          "published_date": "2026-04-21",
+          "role": "Contemporary physical infrastructure background",
+          "claims_supported": "Habshan-Fujairah pipeline length, operator, location, capacity range and reported drone-related loading disruptions."
+        }
+      ],
+      "limitations": [
+        "Announced intentions are explicitly separated from realized output and completed capacity.",
+        "Historical capital plans and reserves are dated and are not asserted to be current output.",
+        "No source published after 28 April supports the event input."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-04-28T23:59:59+00:00",
+      "Title": "2026-04-28 — United Arab Emirates announces withdrawal from OPEC and OPEC+ effective 1 May",
+      "description_word_count": 946,
+      "description_sha256": "f46147b86a86feb3fd4a5592eab1eb5d5e519f4c6bf321e8bc1c29ca84f05d6e",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The November 24 ADNOC release identifies these as the UAE’s conventional reserve base, rather than an ADNOC-only owned reserve inventory. The sentence does not expressly say the company owns all these reserves, but its immediate ADNOC framing leaves an avoidable attribution ambiguity."
+      ]
+    },
+    {
+      "number": 8,
+      "event_date": "2026-05-12",
+      "information_cutoff": "2026-05-12T23:59:59+00:00",
+      "category": "Agriculture / grains / drought / commodity supply",
+      "sources": [
+        {
+          "url": "https://esmis.nal.usda.gov/sites/default/release-files/795899/wasde0526.pdf",
+          "title": "World Agricultural Supply and Demand Estimates, WASDE-671, original May 12, 2026 issue",
+          "published_date": "2026-05-12",
+          "role": "Primary USDA original report preserved in the official ESMIS archive",
+          "claims_supported": "Initial 2026/27 outlook, tentative forecast status, US wheat production and supply-use accounting. Original report corroborated against same-day reporting.",
+          "sha256_at_review": "a83a7bcfa68c140702ba207935349a54775d675c4e1df94914437eaa5eceef8d",
+          "availability_note": "PDF creation and modification timestamps are May 12, 2026; the file retains the original wheat-class-table inconsistency and has no May 13 correction notice. No erroneous class totals are used in the description."
+        },
+        {
+          "url": "https://esmis.nal.usda.gov/sites/default/release-files/795900/crop0526.pdf",
+          "title": "Crop Production, May 12 2026",
+          "published_date": "2026-05-12",
+          "role": "Primary USDA NASS contemporaneous report",
+          "claims_supported": "Survey-based winter wheat estimate; planted versus harvested area and crop production framework."
+        },
+        {
+          "url": "https://data.nass.usda.gov/Newsroom/2026/03-31-2026.php",
+          "title": "US farmers expect to plant less corn and more soybean acres",
+          "published_date": "2026-03-31",
+          "role": "Primary pre-event planting and inventory baseline",
+          "claims_supported": "Survey sample and timing; wheat acreage by category; corn and soybean planting intentions; March 1 stocks."
+        },
+        {
+          "url": "https://nsco.unl.edu/news/early-may-drought-update/",
+          "title": "Early May drought update",
+          "published_date": "2026-05-07",
+          "role": "Primary regional climate assessment",
+          "claims_supported": "Western Nebraska extreme/exceptional drought, twelve counties with D4, regional vegetation stress and cattle-country drought share."
+        },
+        {
+          "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/05/12/usda-estimates-15-995-bb-corn-4-435-2",
+          "title": "USDA Estimates 15.995 BB Corn, 4.435 BB Soybeans, 1.561 BB Wheat for 2026-27",
+          "published_date": "2026-05-12",
+          "role": "Contemporaneous independent numerical cross-check",
+          "claims_supported": "Corn and soybean crop and yield projections; soybean crush; wheat yield, exports and ending stocks."
+        },
+        {
+          "url": "https://hpj.com/2026/05/12/wasde-report-may-12/",
+          "title": "WASDE report forecasts tighter crop supplies, higher prices for 2026-27",
+          "published_date": "2026-05-12",
+          "role": "Contemporaneous independent numerical cross-check",
+          "claims_supported": "World wheat production 819.1 million tonnes versus 843.8 million prior season and named exporting regions; no price forecast from article included."
+        },
+        {
+          "url": "https://www.cihedging.com/posts/articles/may-2026-wasde-report-summary-and-notes/",
+          "title": "May 2026 WASDE Report Summary and Notes",
+          "published_date": "2026-05-12",
+          "role": "Contemporaneous original-release cross-check",
+          "claims_supported": "Wheat production 1.561 billion bushels, winter wheat 1.048 billion, yield 47.5, ending stocks 762 million and exports 775 million."
+        }
+      ],
+      "limitations": [
+        "The original May 12 WASDE is preserved in official ESMIS. Other USDA distribution copies were revised May 13. The original is distinguished by PDF metadata and its retained wheat-class-table inconsistency; no corrected class-level values enter the input.",
+        "All prospective production and use figures are attributed to USDA forecasts, not actual harvest outcomes.",
+        "A climate summary published May 7 but updated July 20 was excluded; the distinct dated Nebraska May 7 statement was used instead."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-05-12T23:59:59+00:00",
+      "Title": "2026-05-12 — USDA publishes its first 2026/27 crop outlook with a sharply smaller US wheat harvest estimate",
+      "description_word_count": 929,
+      "description_sha256": "c62d40a4da363045d1726cabd9c569fbd2dfc6c20fdce2e61090f0d0ce9a3f01",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Replaced inaccessible third-party mirror with the verified original official USDA ESMIS PDF."
+      ]
+    },
+    {
+      "number": 9,
+      "event_date": "2026-04-23",
+      "information_cutoff": "2026-04-23T23:59:59+00:00",
+      "category": "Shipping / trade logistics / transport capacity",
+      "sources": [
+        {
+          "url": "https://pancanal.com/en/panama-canal-meets-rising-demand/",
+          "title": "Panama Canal Meets Rising Demand",
+          "published_date": "2026-04-23",
+          "role": "Primary event briefing; date corroborated by Reuters same-day coverage",
+          "claims_supported": "Auction prices, booking-schedule distinctions, contemporary water levels and monitoring."
+        },
+        {
+          "url": "https://pancanal.com/wp-content/uploads/2026/04/ADV-09-2026-Monthly-Canal-Operations-Summary-March-2026.pdf",
+          "title": "Advisory to Shipping A-09-2026: Canal Operations Summary – March 2026",
+          "published_date": "2026-04-10",
+          "role": "Primary preceding monthly operational snapshot",
+          "claims_supported": "March total of 1,148 oceangoing transits; daily average 37.03, high 41 and low 34; daily arrivals 37.2; time in canal waters 21.39 hours; in-transit time 10.67 hours; 302 Neopanamax transits."
+        },
+        {
+          "url": "https://www.reuters.com/sustainability/climate-energy/panama-canal-says-1-million-plus-auction-slots-reflect-temporary-surge-demand-2026-04-23/",
+          "title": "Panama Canal says $1 million-plus auction slots reflect temporary surge in demand",
+          "published_date": "2026-04-23",
+          "role": "Contemporary event-date and booking-system corroboration",
+          "claims_supported": "Exceptional auction prices, booking in advance and three-to-five daily auction slots."
+        },
+        {
+          "url": "https://www.opis.com/resources/energy-market-news-from-opis/wanhua-pays-4-million-for-lpg-transit-at-panama-canal-neopanamax-auction/",
+          "title": "Wanhua Pays $4 Million for LPG Transit at Panama Canal Neopanamax Auction",
+          "published_date": "2026-04-09",
+          "role": "Primary specialist market reporting",
+          "claims_supported": "Wanhua Gas Virgo reservation, reported US$4 million bid, vessel capacity, direction and scheduled April 15 transit; earlier queues included booked vessels."
+        },
+        {
+          "url": "https://pancanal.com/wp-content/uploads/2026/04/ADV-10-2026-Modifications-to-the-Transit-Reservation-Booking-System.pdf",
+          "title": "Advisory to Shipping A-10-2026: Modifications to the Transit Reservation (Booking) System",
+          "published_date": "2026-04-09",
+          "role": "Primary operating rules",
+          "claims_supported": "April 13 effective date for April 15 bookings, conditional additional slots, 36-hour in-transit time and last-minute/transit-in-advance arrangements."
+        },
+        {
+          "url": "https://pancanal.com/en/panama-canal-announces-enhanced-long-term-slot-allocation-program-lotsa-2-5/",
+          "title": "Panama Canal announces Enhanced Long-Term Slot Allocation Program (LoTSA 2.5)",
+          "published_date": "2026-03-27",
+          "role": "Primary program announcement; date corroborated by dated March 27 ship-agent circular",
+          "claims_supported": "Package flexibility, April 28 auction, May 16 implementation and July 5-January 2 booking dates."
+        },
+        {
+          "url": "https://nortonlilly.com.pa/enhanced-long-term-slot-allocation-lotsa-2-5/",
+          "title": "Enhanced Long-Term Slot Allocation (LoTSA 2.5)",
+          "published_date": "2026-03-27",
+          "role": "Contemporaneous ship-agent circular corroborating announcement vintage",
+          "claims_supported": "Same LoTSA dates and package terms; used to establish that information was available before event cutoff."
+        },
+        {
+          "url": "https://pancanal.com/en/panama-canal-maintains-operational-and-financial-strength/",
+          "title": "Panama Canal Maintains Operational and Financial Strength",
+          "published_date": null,
+          "role": "Primary prior fiscal-year baseline",
+          "claims_supported": "FY 2025 transits of 13,404 versus 11,240; Panamax/Neopanamax split; differentiated cargo performance. Page has no visible date. Published by October 9, 2025, as corroborated by dated World Ports Organization republication."
+        },
+        {
+          "url": "https://www.worldports.org/panama-canal-states-that-it-maintains-operational-and-financial-strength/",
+          "title": "Panama Canal states that it maintains operational and financial strength",
+          "published_date": "2025-10-09",
+          "role": "Contemporaneous corroboration of primary baseline publication vintage",
+          "claims_supported": "Corroborates availability of FY 2025 annual operating baseline before April 2026."
+        }
+      ],
+      "limitations": [
+        "Auction premiums are distinguished from universal tolls and from passage delays.",
+        "No later auction outcomes, transit reductions, drought results or booking changes are included.",
+        "Primary FY 2025 page publication date is not visible; its availability before cutoff is established through an October 2025 dated republication."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-04-23T23:59:59+00:00",
+      "Title": "2026-04-23 — Panama Canal reports sharply higher transit-slot auction prices amid changing shipping demand",
+      "description_word_count": 946,
+      "description_sha256": "2bd05922503111138108738137ee920d11cbc76fc983e9344f2d3e0d9b2c2cda",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": []
+    },
+    {
+      "number": 10,
+      "event_date": "2026-07-16",
+      "information_cutoff": "2026-07-16T23:59:59+00:00",
+      "category": "Metals / copper mining / industrial supply",
+      "sources": [
+        {
+          "url": "https://www.bhp.com/news/media-centre/releases/2026/07/bhp-operational-review-for-the-year-ended-30-june-2026",
+          "title": "BHP Operational review for the year ended 30 June 2026",
+          "published_date": "2026-07-16",
+          "role": "Primary event release",
+          "claims_supported": "Completed-year copper output of 1.953 million tonnes; FY 2027 guidance of 1.65–1.80 million tonnes; expected Escondida feed grade and guidance. Detailed report also publicly transmitted through exchange announcement."
+        },
+        {
+          "url": "https://www2.sharenet.co.za/v3/sens_display.php?seq=7&tdate=20260716071500",
+          "title": "BHP Group Limited: Quarterly Activities Report",
+          "published_date": "2026-07-16",
+          "role": "Primary exchange-release reproduction of same July 16 report",
+          "claims_supported": "Full report tables and Escondida 100 percent versus ownership reporting; grade constraints; July 1 CEO transition."
+        },
+        {
+          "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2024/241120_chileancoppersitetour_day2presentationsandspeeches.pdf",
+          "title": "2024 Chilean copper site tour: Escondida presentation and speech",
+          "published_date": "2024-11-19",
+          "role": "Primary historical operational background",
+          "claims_supported": "Two pits, processing routes, mine sequencing and infrastructure constraints; cathode rail and concentrate pipeline, desalination and freshwater operations."
+        },
+        {
+          "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260422_bhpoperationalreviewfortheninemonthsended31march2026.pdf",
+          "title": "Operational review for the nine months ended 31 March 2026",
+          "published_date": "2026-04-22",
+          "role": "Primary preceding operational and capital snapshot",
+          "claims_supported": "Earlier upper-half FY 2026 guidance, asset differences, concentrator permitting, diesel/consumable pressures; Antamina streaming receipt and Carajas divestment."
+        },
+        {
+          "url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260217_bhpresultsforthehalfyearended31dec2025_exchangerelease.pdf",
+          "title": "Financial results for the half year ended 31 December 2025",
+          "published_date": "2026-02-17",
+          "role": "Primary earlier financial baseline",
+          "claims_supported": "Copper 51 percent of underlying EBITDA, FY 2026 copper guidance of 1.9–2.0 million tonnes, preceding four-year output expansion and asset ownership context."
+        },
+        {
+          "url": "https://www.bhp.com/news/media-centre/releases/2026/05/bofa-global-metals-mining-and-steel-conference-2026",
+          "title": "Bank of America 2026 Global Metals, Mining and Steel Conference - Speech and Webcast",
+          "published_date": "2026-05-12",
+          "role": "Primary pre-event strategy presentation",
+          "claims_supported": "Brandon Craig announced succession, operational system, safety, technology adoption and capital discipline."
+        }
+      ],
+      "limitations": [
+        "Guidance is explicitly attributed to management and is not treated as realized future output.",
+        "July 16 Australian release date is used; Reuters first timestamp falls late July 15 UTC because of timezone differences.",
+        "No August annual financial results or later copper-mine developments are used."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-07-16T23:59:59+00:00",
+      "Title": "2026-07-16 — BHP reports annual copper output and publishes lower production guidance for the next financial year",
+      "description_word_count": 927,
+      "description_sha256": "b1cdee173b041213981a7e827acc29a90f09cec55e4007860924d6fd755ac59c",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": []
+    },
+    {
+      "number": 11,
+      "event_date": "2026-04-18",
+      "information_cutoff": "2026-04-18T23:59:59+00:00",
+      "category": "Cryptocurrency security and decentralized lending",
+      "sources": [
+        {
+          "url": "https://www.coindesk.com/tech/2026/04/19/2026-s-biggest-crypto-exploit-kelp-dao-hit-for-usd292-million-with-wrapped-ether-stranded-across-20-chains",
+          "title": "2026's biggest crypto exploit: $292 million gets drained from Kelp DAO with wrapped ether stranded across 20 chains",
+          "published_date": "2026-04-18",
+          "role": "Contemporaneous incident reporting",
+          "claims_supported": "Initial 17:35 UTC transaction, 116,500 rsETH, approximate $292 million and 18% figures; bridge and pause. Article displays April 18 publication and update despite April 19 URL."
+        },
+        {
+          "url": "https://governance.aave.com/t/rseth-incident-2026-04-18/24481",
+          "title": "rsETH incident — 2026-04-18",
+          "published_date": "2026-04-18",
+          "role": "Primary risk-provider announcement, first post only",
+          "claims_supported": "18:52 UTC Guardian actions, listed deployments, meaning of freezes, existing positions, V4 protections, investigation status. Only post 1 at 22:24 used; April 19 replies excluded."
+        },
+        {
+          "url": "https://blogs.kerneldao.com/blog/decoding-the-tech-behind-rseth",
+          "title": "Decoding the tech behind rsETH",
+          "published_date": "2023-11-13",
+          "role": "Primary historical technical explanation",
+          "claims_supported": "Liquid restaking purpose, deposit pool, node delegators, reward and withdrawal modules."
+        },
+        {
+          "url": "https://governance.aave.com/t/temp-check-add-rseth-to-aave-v3-ethereum/16688",
+          "title": "[TEMP CHECK] Add rsETH to Aave V3 Ethereum",
+          "published_date": "2024-02-20",
+          "role": "Primary historical governance record",
+          "claims_supported": "Early reported scale, accepted underlying assets, exchange-rate discussion, distinction of trading and withdrawals; dated May 2024 replies only for withdrawal activation."
+        },
+        {
+          "url": "https://gov.fluid.io/t/deploy-rseth-markets-on-fluid-ethereum/1073",
+          "title": "Deploy rsETH Markets on Fluid — Ethereum",
+          "published_date": "2024-12-18",
+          "role": "Primary Kelp-authored integration proposal",
+          "claims_supported": "Historical TVL, ETH and Aave balances, integration count, proposed collateral controls, then-indicative withdrawal periods."
+        },
+        {
+          "url": "https://www.llamarisk.com/research/collateral-risk-rseth",
+          "title": "Collateral Risk Assessment — Kelp DAO Restaked ETH (rsETH)",
+          "published_date": "2024-07-24",
+          "role": "Historical technical risk assessment by protocol risk specialist",
+          "claims_supported": "Historical price aggregation, configuration and access controls, operator selection, off-chain processing, withdrawal queues and deposit-pool unstaking buffer; no cause of the April 18 incident is inferred."
+        }
+      ],
+      "limitations": [
+        "Preliminary loss estimates, not audited final loss. No attacker attribution, compromised RPC/DVN explanation, later recovery or loss-allocation outcomes included. Historical metrics and withdrawal timings explicitly dated and not presented as April 2026 balances. Aave incident source restricted to first post dated 18 April; later thread replies excluded."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-04-18T23:59:59+00:00",
+      "Title": "2026-04-18 — KelpDAO rsETH bridge exploit and emergency collateral freezes",
+      "description_word_count": 926,
+      "description_sha256": "f3d6c89cf249bb50ee953cb7943c94b62217da2272c26c9cc45bdf2f469a69c3",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The paragraph names the same four operational dependencies twice and repeats the assessment framing. No factual contradiction, but it reads as word-count padding. Replace the whole paragraph with the supplied nonduplicative version."
+      ]
+    },
+    {
+      "number": 12,
+      "event_date": "2026-05-04",
+      "information_cutoff": "2026-05-04T23:59:59+00:00",
+      "category": "Financial market infrastructure and tokenized securities",
+      "sources": [
+        {
+          "url": "https://www.dtcc.com/press-releases/2026/dtcc-advances-development-of-new-tokenization-service",
+          "title": "DTCC Advances Development of New Tokenization Service, Convenes 50+ Firms to Drive Digital Assets Adoption",
+          "published_date": "2026-05-04",
+          "role": "Primary event announcement",
+          "claims_supported": "July limited production and October planned launch; 50+ firms; named participants; over $114 trillion custody; working-group tasks."
+        },
+        {
+          "url": "https://www.dtcc.com/press-releases/2025/paving-the-way-to-tokenized-dtc-custodied-assets",
+          "title": "DTCC Authorized to Offer New Tokenization Service, Paving the Way to Tokenized DTC-Custodied Assets",
+          "published_date": "2025-12-11",
+          "role": "Primary historical authorization announcement",
+          "claims_supported": "Three-year limited arrangement, eligible assets and preserved entitlements."
+        },
+        {
+          "url": "https://www.sec.gov/files/tm/no-action/dtc-nal-121125.pdf",
+          "title": "No-Action Letter Request Related to DTC Development of DTCC Tokenization Services",
+          "published_date": "2025-12-11",
+          "role": "Primary regulatory letter and application",
+          "claims_supported": "Registered wallets, omnibus account, tokenization and detokenization, no double representation, Cede & Co ownership, recordkeeping."
+        },
+        {
+          "url": "https://www.sec.gov/files/rules/sro/nyse/2026/34-105260.pdf",
+          "title": "NYSE Notice of Filing and Immediate Effectiveness of Proposed Rule Change to Enable Trading of Securities in Tokenized Form",
+          "published_date": "2026-04-17",
+          "role": "Primary exchange rule filing; filed 2026-04-09",
+          "claims_supported": "Same rights/CUSIP/symbol, existing exchange rules, T+1, availability dependent on DTC infrastructure, collateral and debit-cap controls."
+        },
+        {
+          "url": "https://fnality.com/news/fnality-integrates-its-cutting-edge-payment-rail-with-dtcc-digital-launchpad",
+          "title": "Fnality Explores Integration of Its Cutting-Edge Payment Rail with DTCC Digital Launchpad",
+          "published_date": "2025-06-17",
+          "role": "Primary participant account of earlier experiment",
+          "claims_supported": "Digital Launchpad, cash leg, central-bank-money representation, delivery-versus-payment test, partner connectivity."
+        },
+        {
+          "url": "https://www.tradersmagazine.com/departments/digital-assets/dtcc-to-launch-digital-assets-solutions-business/",
+          "title": "DTCC to Launch Digital Assets Solutions Business",
+          "published_date": "2026-04-02",
+          "role": "DTCC CEO letter reproduced by trade publication",
+          "claims_supported": "Digital Asset Solutions unit, Tom Sullivan and Nadine Chakar roles, advisory council, technology/business coordination."
+        }
+      ],
+      "limitations": [
+        "July and October dates are announced plans, not subsequent outcomes. Custody total is not tokenized value. SEC document is conditional staff no-action relief, not universal approval of all tokens. Fnality example explicitly described as prior testing and not a settled feature of planned production service."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-05-04T23:59:59+00:00",
+      "Title": "2026-05-04 — DTCC announces timetable for tokenizing major securities",
+      "description_word_count": 949,
+      "description_sha256": "684dc88ab26ef523a7d626d1efe05917fee6fb308d50e88a447618cc6b1d164e",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": []
+    },
+    {
+      "number": 13,
+      "event_date": "2026-05-14",
+      "information_cutoff": "2026-05-14T23:59:59+00:00",
+      "category": "United States digital asset market regulation",
+      "sources": [
+        {
+          "url": "https://www.banking.senate.gov/newsroom/majority/chairman-scott-senate-banking-committee-advance-clarity-act-in-historic-bipartisan-vote",
+          "title": "Chairman Scott, Senate Banking Committee Advance Clarity Act in Historic Bipartisan Vote",
+          "published_date": "2026-05-14",
+          "role": "Primary committee result",
+          "claims_supported": "15–9 vote, title, chairman, committee advancement and stated rationale."
+        },
+        {
+          "url": "https://www.banking.senate.gov/imo/media/doc/ehf26374.pdf",
+          "title": "Amendment in the nature of a substitute to H.R. 3633, EHF26374",
+          "published_date": "2026-05-12",
+          "role": "Primary legislative text released May 12 ahead of May 14 markup",
+          "claims_supported": "SEC/CFTC framework, ancillary-asset transactions, Regulation Crypto, retained liability, securities market rulemaking."
+        },
+        {
+          "url": "https://www.banking.senate.gov/imo/media/doc/section-by-section.pdf",
+          "title": "CLARITY Act Section-by-Section, Chairman Tim Scott",
+          "published_date": "2026-05-12",
+          "role": "Primary pre-markup legislative explanation",
+          "claims_supported": "Ancillary asset disclosures and certification, stablecoin Section 404 distinction, joint rulemaking and tokenized securities."
+        },
+        {
+          "url": "https://bankingjournal.aba.com/2026/05/aba-to-senate-refine-clarity-acts-stablecoin-yield-language/",
+          "title": "ABA to Senate Banking: Refine Clarity Act’s stablecoin yield language",
+          "published_date": "2026-05-08",
+          "role": "Primary trade association account of joint letter",
+          "claims_supported": "Six bank groups, Tillis/Alsobrooks compromise and stated deposit/credit concerns."
+        },
+        {
+          "url": "https://www.sec.state.ma.us/divisions/securities/download/5-14-26-Committee-on-Banking-Housing-and-Urban-Affairs-May-14-2026-Markup.pdf",
+          "title": "William Galvin letter concerning May 14 CLARITY Act markup",
+          "published_date": "2026-05-12",
+          "role": "Primary state securities regulator letter",
+          "claims_supported": "State authority, investment-contract and exemption concerns, proposed state enforcement protection."
+        },
+        {
+          "url": "https://www.banking.senate.gov/newsroom/minority/senator-warren-opening-remarks-at-committee-mark-up-of-the-clarity-act",
+          "title": "Senator Warren Opening Remarks at Committee Mark Up of the Clarity Act",
+          "published_date": "2026-05-14",
+          "role": "Primary committee opposition statement",
+          "claims_supported": "Warren’s stated investor-protection, illicit-finance, stability and ethics objections; amendment procedure dispute."
+        }
+      ],
+      "limitations": [
+        "Committee advancement is not enactment. Detailed policy provisions are attributed to pre-markup draft/May 12 briefing rather than falsely certified as final enacted text. Stakeholder concerns are attributed arguments, not realized outcomes. No post-May 14 legislative developments used."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-05-14T23:59:59+00:00",
+      "Title": "2026-05-14 — US Senate Banking Committee advances the CLARITY Act",
+      "description_word_count": 914,
+      "description_sha256": "bb579e7bdf9d7c89f3a49d2b5ebccbdb246f5d2a2809125f3cd27b3572c55519",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Replaced the misdated January draft with the May 12 pre-markup text EHF26374.",
+        "This future-exclusion list is redundant with the explicit cutoff and the preceding statement that the legislative process remained incomplete. It does not disclose an actual outcome, but deleting it produces a cleaner contemporaneous model input."
+      ]
+    },
+    {
+      "number": 14,
+      "event_date": "2026-06-22",
+      "information_cutoff": "2026-06-22T23:59:59+00:00",
+      "category": "Payments, stablecoins and financial stability",
+      "sources": [
+        {
+          "url": "https://www.bankofengland.co.uk/news/2026/june/bank-of-england-launches-policy-statement-and-draft-rules-on-regulating-systemic-stablecoins",
+          "title": "Bank of England launches policy statement and draft rules on regulating systemic stablecoins",
+          "published_date": "2026-06-22",
+          "role": "Primary event release",
+          "claims_supported": "70% versus 60% government debt backing, £40 billion per-coin issuance guardrail, feedback and intended implementation timetable."
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/paper/2026/ps/sterling-denominated-systemic-stablecoins",
+          "title": "Sterling-denominated systemic stablecoins",
+          "published_date": "2026-06-22",
+          "role": "Primary policy statement and draft rules",
+          "claims_supported": "Systemic recognition and joint supervision; temporary 95% government-debt step-up allowance moving toward 70%; redemption timing; statutory trusts and enabling-legislation dependency."
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/paper/2025/cp/proposed-regulatory-regime-for-sterling-denominated-systemic-stablecoins",
+          "title": "Proposed regulatory regime for sterling-denominated systemic stablecoins",
+          "published_date": "2025-11-10",
+          "role": "Primary prior consultation",
+          "claims_supported": "£20,000 individual and £10 million business proposed limits, exemptions, deposit transition and credit/usability considerations."
+        },
+        {
+          "url": "https://www.fca.org.uk/publication/consultation/cp25-14.pdf",
+          "title": "CP25/14 Stablecoin issuance and cryptoasset custody",
+          "published_date": "2025-05-28",
+          "role": "Primary dated consultation PDF",
+          "claims_supported": "Prior issuer backing, custody, trust, reconciliation, oversight and disclosure proposals; not later-updated landing-page rules."
+        },
+        {
+          "url": "https://assets.publishing.service.gov.uk/media/6736385fb613efc3f182317a/National_Payments_Vision..pdf",
+          "title": "National Payments Vision",
+          "published_date": "2024-11-14",
+          "role": "Primary government payments strategy",
+          "claims_supported": "Infrastructure, competition, predictable regulation, security, 29.1 billion card payments in 2023 and Open Banking."
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/speech/2026/may/sarah-breeden-speech-at-city-week-the-future-of-money-in-a-digital-world",
+          "title": "Modernising money and markets — speech by Sarah Breeden",
+          "published_date": "2026-05-19",
+          "role": "Primary prior policy speech",
+          "claims_supported": "Multiple forms of money, 2024 Digital Securities Sandbox, settlement finality, resilience and interoperability."
+        }
+      ],
+      "limitations": [
+        "Policy statement distinguishes settled policy positions from draft Code still subject to feedback. Future dates are announced schedule only. No June 30 FCA final rules or subsequent adoption used. Statutory trust enabling legislation remains a stated dependency."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-06-22T23:59:59+00:00",
+      "Title": "2026-06-22 — Bank of England revises its systemic stablecoin framework",
+      "description_word_count": 923,
+      "description_sha256": "a56d5c841db5b94274694b556b5d5012d694cf49675ba209516039698ff0e7c2",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The 70% ceiling is the steady-state calibration, not an unconditional ceiling for all systemic issuers at every stage. The same June22 policy expressly retains a step-up allowance of up to95% government debt for systemic-at-launch firms. The press release itself summarizes70%, so this is a precision improvement rather than a wrong headline number.",
+        "Added the published temporary 95% step-up allowance for issuers systemic at launch.",
+        "Removed repeated general explanation after the policy perimeter was already stated.",
+        "Removed a general restatement after the concrete redemption and safeguarding provisions.",
+        "Tightened repeated context wording.",
+        "Tightened repeated context wording."
+      ]
+    },
+    {
+      "number": 15,
+      "event_date": "2026-06-24",
+      "information_cutoff": "2026-06-24T23:59:59+00:00",
+      "category": "Crypto exchanges and European market access",
+      "sources": [
+        {
+          "url": "https://www.binance.com/en/blog/regulation/4457979419755346760",
+          "title": "Important Update for Our European Users",
+          "published_date": "2026-06-24",
+          "role": "Primary event announcement",
+          "claims_supported": "Withdrawal of HCMC application, unnamed replacement jurisdiction, no formal decision/company explanation, country/account variation and asset-access assurances attributed to company."
+        },
+        {
+          "url": "https://www.binance.com/en/blog/regulation/5369321191341949883",
+          "title": "An Update on Our MiCA Licensing Journey in Europe",
+          "published_date": "2026-06-16",
+          "role": "Primary pre-event company statement",
+          "claims_supported": "Application background, 1,500 compliance personnel, controls and ADGM licenses; all company claims identified."
+        },
+        {
+          "url": "https://www.reuters.com/business/finance/binance-vows-stay-europe-despite-licence-setback-2026-06-24/",
+          "title": "Binance vows to stay in Europe despite licence setback",
+          "published_date": "2026-06-24",
+          "role": "Contemporaneous independent reporting and executive interview",
+          "claims_supported": "Largest exchange description, company claim of 300 million global customers, EU count not disclosed, Gillian Lynch alternative-route statement."
+        },
+        {
+          "url": "https://www.esma.europa.eu/sites/default/files/2026-06/ESMA75-113276571-1710_Public_Statement_MiCA_transitional_period_ends.pdf",
+          "title": "ESMA calls on unauthorised crypto-asset service providers to wind down orderly while safeguarding clients as MiCA transitional period ends",
+          "published_date": "2026-06-23",
+          "role": "Primary immediate supervisory context",
+          "claims_supported": "Stop new clients/solicitation, limited exit services/custody, communications and closure deadlines."
+        },
+        {
+          "url": "https://www.esma.europa.eu/sites/default/files/2026-04/ESMA75-113276571-1679_Statement_on_the_end_of_transitional_periods_under_MiCA.pdf",
+          "title": "Statement on the End of Transitional Periods under MiCA",
+          "published_date": "2026-04-17",
+          "role": "Primary prior supervisory guidance",
+          "claims_supported": "1 July deadline, executable wind-down and transfer plans, onboarding checks, protection applies to authorized entity only."
+        },
+        {
+          "url": "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX%3A32023R1114",
+          "title": "Regulation (EU) 2023/1114 on markets in crypto-assets",
+          "published_date": "2023-06-09",
+          "role": "Primary statutory framework",
+          "claims_supported": "Adoption in May 2023, Article 143 transition and Article 67 prudential safeguards. Indexed original text used; original regulation identified rather than later amendment outcomes."
+        },
+        {
+          "url": "https://www.justice.gov/archives/opa/pr/binance-and-ceo-plead-guilty-federal-charges-4b-resolution",
+          "title": "Binance and CEO Plead Guilty to Federal Charges in $4B Resolution",
+          "published_date": "2023-11-21",
+          "role": "Primary prior enforcement announcement",
+          "claims_supported": "US guilty plea, covered violations, over $4 billion resolution, CEO resignation, compliance and independent monitor."
+        }
+      ],
+      "limitations": [
+        "Company assertions about compliance and customer assets remain attributed. Withdrawal is not represented as a formal Greek rejection. No June 25/26 client notice details or July implementation inserted. Company user count from contemporary reporting, not live page footer."
+      ],
+      "information_cutoff_timezone": "UTC",
+      "information_cutoff_utc": "2026-06-24T23:59:59+00:00",
+      "Title": "2026-06-24 — Binance withdraws Greek MiCA licence application before EU deadline",
+      "description_word_count": 929,
+      "description_sha256": "df5cb19aab8e27926f7f1241159a30ae0120551c5ab0094b19cf69dcdac8e398",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Even though it denies assuming an outcome, the list introduces suspension, migrations and competitor gains as salient later consequence categories. The competitor-gains framing is particularly directional and unnecessary for a neutral contemporaneous input. Remove the sentence; no new filler is required. This is outcome priming, not proof that a later fact was explicitly disclosed.",
+        "The retrieved Reuters text and its same-day Euronext republication say one of the world’s largest crypto companies, not the world’s largest crypto exchange. The broader characterization may be independently true, but this sentence attributes it specifically to this Reuters report; align that attribution with the actual source."
+      ]
+    },
+    {
+      "number": 16,
+      "event_date": "2026-05-20",
+      "information_cutoff": "2026-05-20T23:59:59-04:00",
+      "category": "Semiconductors and artificial intelligence infrastructure",
+      "sources": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-first-quarter-fiscal-2027",
+          "title": "NVIDIA Announces Financial Results for First Quarter Fiscal 2027",
+          "published_date": "2026-05-20",
+          "role": "event primary",
+          "claims_supported": "Quarterly results, capital distributions and company guidance."
+        },
+        {
+          "url": "https://www.marketscreener.com/news/nvidia-first-quarter-2027-cfo-commentary-ce7f5ad9df8af021",
+          "title": "NVIDIA: First Quarter 2027 CFO Commentary",
+          "published_date": "2026-05-20",
+          "role": "primary company commentary syndicated by Publicnow",
+          "claims_supported": "Revenue drivers, customer mix, China shipments and equity gains."
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026",
+          "published_date": "2026-02-25",
+          "role": "prior primary results",
+          "claims_supported": "Fiscal-year scale and preceding quarter capital return context."
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-vera-rubin-platform",
+          "title": "NVIDIA Vera Rubin Opens Agentic AI Frontier",
+          "published_date": "2026-03-16",
+          "role": "primary product announcement",
+          "claims_supported": "Platform components, rack configurations and partner ecosystem."
+        },
+        {
+          "url": "https://stage-investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+          "title": "Micron in High-Volume Production of HBM 4 Designed for NVIDIA Vera Rubin, PCIe Gen 6 SSD and SOCAMM 2",
+          "published_date": "2026-03-16",
+          "role": "supplier primary announcement",
+          "claims_supported": "Memory and storage production, shipment and sampling stages."
+        },
+        {
+          "url": "https://assets.nebius.com/assets/2e145023-e8ff-45c6-80f5-c12d1edbfcaa/20260316%20Nebius%20signs%20new%20AI%20infrastructure%20agreement%20with%20Meta%3B%20deal%20to%20accelerate%20growth%20of%20Nebius%E2%80%99s%20core%20business%20in%20AI%20cloud%20.pdf",
+          "title": "Nebius signs new AI infrastructure agreement with Meta",
+          "published_date": "2026-03-16",
+          "role": "customer primary announcement",
+          "claims_supported": "Dedicated and additional capacity commitments and delivery schedule."
+        }
+      ],
+      "limitations": [
+        "Manufacturer performance claims are identified as company claims. No subsequent share-price reaction is included."
+      ],
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-05-21T03:59:59+00:00",
+      "Title": "2026-05-20 — NVIDIA reports record quarterly revenue and expands shareholder distributions",
+      "description_word_count": 928,
+      "description_sha256": "2ad4686a930ebc91b1be77edf6b413f4826e3154c4cb19fb102dc4e7c461e5c9",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Corrected platform-update chronology; the initial Rubin launch preceded March 16.",
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 17,
+      "event_date": "2026-06-11",
+      "information_cutoff": "2026-06-11T23:59:59-05:00",
+      "category": "Equity capital markets, aerospace and satellite communications",
+      "sources": [
+        {
+          "url": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Pricing-of-Initial-Public-Offering/default.aspx",
+          "title": "Space Exploration Technologies Corp. Announces Pricing of Initial Public Offering",
+          "published_date": "2026-06-11",
+          "role": "event primary",
+          "claims_supported": "Pricing, shares, option, planned trading and settlement dates."
+        },
+        {
+          "url": "https://assets.ctfassets.net/4xftowcfqjsd/2nC81GOlUFkrnsC6J1v393/d016e2b66139e98be67dc58c1b58765c/SpaceX_-_EU_Prospectus_Summary_-_June_5__2026.pdf",
+          "title": "SpaceX EU Prospectus Summary",
+          "published_date": "2026-06-05",
+          "role": "primary issuer prospectus summary",
+          "claims_supported": "Business segments, consolidated financials, voting control and operating dependencies."
+        },
+        {
+          "url": "https://x.ai/news/xai-joins-spacex",
+          "title": "xAI joins SpaceX",
+          "published_date": "2026-02-02",
+          "role": "primary acquisition announcement",
+          "claims_supported": "Completed xAI acquisition."
+        },
+        {
+          "url": "https://www.spacex.com/updates/reusability",
+          "title": "SpaceX updates: SpaceX acquires xAI",
+          "published_date": "2026-02-02",
+          "role": "dated primary announcement within updates page",
+          "claims_supported": "Combined operations and orbital-computing ambition."
+        },
+        {
+          "url": "https://docs.fcc.gov/public/attachments/DOC-417881A1.pdf",
+          "title": "FCC Approves Next-Gen Satellite Constellation",
+          "published_date": "2026-01-09",
+          "role": "regulator announcement",
+          "claims_supported": "Additional 7500 Gen 2 satellites and 15000 total authorization."
+        },
+        {
+          "url": "https://oig.nasa.gov/wp-content/uploads/2026/03/final-report-ig-26-004-nasas-management-of-the-human-landing-system-contracts.pdf",
+          "title": "NASA’s Management of the Human Landing System Contracts, IG-26-004",
+          "published_date": "2026-03-10",
+          "role": "official audit report",
+          "claims_supported": "Milestone contracts, costs and technical-development context."
+        },
+        {
+          "url": "https://www.nasdaq.com/newsroom/nasdaq100-index-methodology-update-why-now",
+          "title": "Nasdaq-100 Index Methodology Update: Why Now, and What It Means",
+          "published_date": "2026-05-08",
+          "role": "primary index-provider explanation",
+          "claims_supported": "May 1 rule changes, fast entry and float weighting."
+        },
+        {
+          "url": "https://www.banking.senate.gov/imo/media/doc/2026.06.09%20FINAL%20Letter%20to%20SEC%20re%20SpaceX%20IPO%20v3.pdf",
+          "title": "Elizabeth Warren letter to SEC Chair Paul Atkins concerning SpaceX IPO",
+          "published_date": "2026-06-09",
+          "role": "primary legislative correspondence",
+          "claims_supported": "Existing valuation, accounting and governance scrutiny."
+        }
+      ],
+      "limitations": [
+        "Full US S-1 exceeded browser size limit; financial figures verified in readable contemporaneous issuer EU prospectus summary. FCC PDF direct retrieval returned403; dated official indexed excerpt supports only authorization counts used. SpaceX updates page is living; only indexed February2 acquisition entry used."
+      ],
+      "information_cutoff_timezone": "America/Chicago",
+      "information_cutoff_utc": "2026-06-12T04:59:59+00:00",
+      "Title": "2026-06-11 — SpaceX prices its initial public offering at $135 per share",
+      "description_word_count": 902,
+      "description_sha256": "cb3e3ccba68046c65b2f3c2dbff2891ee2fc9d08a5512b3ebcb46f9b4c01dbef",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 18,
+      "event_date": "2026-07-16",
+      "information_cutoff": "2026-07-16T23:59:59-04:00",
+      "category": "Food delivery, digital platforms and cross-border acquisitions",
+      "sources": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Acquisition-Offer-for-Delivery-Hero/default.aspx",
+          "title": "Uber Announces Acquisition Offer for Delivery Hero",
+          "published_date": "2026-07-16",
+          "role": "event primary",
+          "claims_supported": "Offer price, valuation, stakes and retained market footprint."
+        },
+        {
+          "url": "https://www.deliveryhero.com/newsroom/delivery-hero-and-uber-to-join-forces-to-deliver-more-for-customers-vendors-and-riders/",
+          "title": "Delivery Hero and Uber to Join Forces to Deliver More for Customers, Vendors and Riders",
+          "published_date": "2026-07-16",
+          "role": "target primary announcement",
+          "claims_supported": "SSW disposal, boards, Berlin commitments and Germany investment undertaking."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000155278126000382/e26302_uber-8k.htm",
+          "title": "Uber Form 8-K: Business Combination Agreement and Bridge Credit Agreement",
+          "published_date": "2026-07-16",
+          "role": "regulatory filing",
+          "claims_supported": "Conditions, planned closing, funding and termination provisions."
+        },
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Results-for-First-Quarter-2026/default.aspx",
+          "title": "Uber Announces Results for First Quarter 2026",
+          "published_date": "2026-05-06",
+          "role": "prior primary results",
+          "claims_supported": "Bookings, revenue, trips, consumers, profit and cash flow."
+        },
+        {
+          "url": "https://www.deliveryhero.com/newsroom/delivery-hero-reports-adj-ebitda-up-30-in-2025-as-quick-commerce-and-key-markets-gain-momentum/",
+          "title": "Delivery Hero reports adj. EBITDA up 30% in 2025, as Quick Commerce and key markets gain momentum",
+          "published_date": "2026-03-26",
+          "role": "Primary audited 2025 results and pre-cutoff transaction context",
+          "claims_supported": "Audited annual GMV, segment revenue, adjusted EBITDA and EUR250 million free cash flow before extraordinary items with exclusions; quick-commerce scale; March 23 Taiwan sale agreement with Grab for USD600 million, approval condition and intended debt use."
+        },
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-Eats-to-Acquire-Delivery-Heros-foodpanda-Delivery-Business-in-Taiwan/default.aspx",
+          "title": "Uber Eats to Acquire Delivery Hero’s foodpanda Delivery Business in Taiwan",
+          "published_date": "2024-05-13",
+          "role": "prior primary transaction announcement",
+          "claims_supported": "Earlier Taiwan agreement and 300 million equity investment."
+        },
+        {
+          "url": "https://www.ftc.gov.tw/internet/english/doc/docDetail.aspx?docid=17975&uid=179",
+          "title": "December 2024: Merger notifications or concerted action applications",
+          "published_date": "2025-01-23",
+          "role": "regulator decision summary",
+          "claims_supported": "Taiwan FTC prohibited earlier merger on competitive-balance grounds."
+        },
+        {
+          "url": "https://www.eqs-news.com/de/news/ad-hoc/delivery-hero-se-taiwan-fair-trade-commission-tftc-does-not-issue-approval-for-the-sale-of-the-foodpanda-business-in-taiwan-to-uber-technologies-inc-uber/f23201bc-071c-4982-bd4a-47291f02129f_en",
+          "title": "Delivery Hero SE: TFTC does not issue approval for sale of foodpanda Taiwan to Uber",
+          "published_date": "2024-12-25",
+          "role": "primary market disclosure",
+          "claims_supported": "Contemporaneous acknowledgment of prior regulatory refusal."
+        },
+        {
+          "url": "https://www.deliveryhero.com/newsroom/delivery-hero-accelerates-q1-gmv-growth-driven-by-everyday-app-strategy-and-quick-commerce-momentum/",
+          "title": "Delivery Hero accelerates Q1 GMV growth, driven by Everyday App strategy and Quick Commerce momentum",
+          "published_date": "2026-04-30",
+          "role": "Latest pre-event quarterly operating update",
+          "claims_supported": "Q1 2026 GMV and segment revenue, 8.8% like-for-like constant-currency/ex-hyperinflation versus 0.8% reported growth, Asia 3.0%, and management guidance."
+        }
+      ],
+      "limitations": [
+        "Delivery Hero figures use audited March 26 annual results and the April 30 quarterly update. Its company-defined cash flow and like-for-like growth measures retain their stated exclusions; its group perimeter differs from the assets Uber proposed to retain."
+      ],
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-07-17T03:59:59+00:00",
+      "Title": "2026-07-16 — Uber announces a €41.50-per-share takeover offer for Delivery Hero",
+      "description_word_count": 951,
+      "description_sha256": "3e010f3c0f671d3e96bb85688cc7c4b0bc96b554a4f93887d426dfb4663fd839",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Replaced preliminary company figures with audited FY2025 and April 30 Q1 figures, preserving cash-flow exclusions and growth-comparison bases.",
+        "Added the pre-cutoff March 23 foodpanda Taiwan disposal agreement and retained its approval condition.",
+        "Clarified the measurement proxy in the combined transaction presentation.",
+        "Replaced the preliminary February trading update with the final March annual-results release.",
+        "Added the April 30 operating update available before the July takeover announcement."
+      ]
+    },
+    {
+      "number": 19,
+      "event_date": "2026-05-26",
+      "information_cutoff": "2026-05-26T23:59:59-04:00",
+      "category": "Pharmaceuticals, biotechnology and research investment",
+      "sources": [
+        {
+          "url": "https://investor.lilly.com/node/54346",
+          "title": "Lilly announces three acquisitions to build infectious disease portfolio",
+          "published_date": "2026-05-26",
+          "role": "event primary",
+          "claims_supported": "Deal values, conditional payments, closing and accounting treatment."
+        },
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/05/26/3300914/0/en/curevo-to-be-acquired-by-lilly-to-advance-next-generation-shingles-prevention.html",
+          "title": "Curevo to be Acquired by Lilly to Advance Next-Generation Shingles Prevention",
+          "published_date": "2026-05-26",
+          "role": "target primary announcement",
+          "claims_supported": "Curevo development stage, trial claims and vaccine approach."
+        },
+        {
+          "url": "https://alts.axa-im.com/media-centre/bnp-paribas-asset-management-alts-exit-its-stake-biotechnology-company-limmatech-biologics-ag-sale",
+          "title": "BNP Paribas Asset Management Alts to exit its stake in LimmaTech in sale to Lilly",
+          "published_date": "2026-05-26",
+          "role": "investor primary announcement",
+          "claims_supported": "Bacterial vaccine platform and 2023 Series A financing."
+        },
+        {
+          "url": "https://novoholdings.com/news/novo-holdings-announces-acquisition-of-portfolio-company-limmatech-biologics-by-lilly",
+          "title": "Novo Holdings announces acquisition of portfolio company LimmaTech Biologics by Lilly",
+          "published_date": "2026-05-26",
+          "role": "investor primary announcement",
+          "claims_supported": "REPAIR fund involvement and financing context."
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/vaccine-company-to-be-acquired-by-lilly-to-advance-best-in-class-vaccine-candidates-for-epstein-barr-virus-and-other-infectious-diseases-302781387.html",
+          "title": "Vaccine Company to be acquired by Lilly to advance vaccine candidates for Epstein-Barr Virus and other infectious diseases",
+          "published_date": "2026-05-26",
+          "role": "target primary announcement",
+          "claims_supported": "Preclinical portfolio, IVN approach and conditional consideration."
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000043/q126lillysalesandearningsp.htm",
+          "title": "Lilly reports first-quarter 2026 financial results",
+          "published_date": "2026-04-30",
+          "role": "prior primary results",
+          "claims_supported": "Buyer revenue, products, profitability, pricing and research expenditure."
+        },
+        {
+          "url": "https://www.bio-technopark.ch/en/news-en/limmatech-biologics-to-be-acquired-by-lilly-for-nextgeneration-vaccines-against-common-bacterial-infections/",
+          "title": "LimmaTech Biologics to be Acquired by Lilly for Next-generation Vaccines Against Common Bacterial Infections",
+          "published_date": "2026-05-26",
+          "role": "target primary announcement syndicated by biotechnology park",
+          "claims_supported": "LTB-SA 7 clinical stage and bacterial targets."
+        }
+      ],
+      "limitations": [
+        "Medical-development statements are attributed to companies and distinguish trial responses from approved clinical benefits. Maximum consideration includes contingent milestones; no undisclosed upfront amount is estimated."
+      ],
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-05-27T03:59:59+00:00",
+      "Title": "2026-05-26 — Eli Lilly agrees three vaccine acquisitions worth up to $3.83 billion",
+      "description_word_count": 934,
+      "description_sha256": "ed64fde7de7faca3e8351c5f93a0f6dec20cd1e781bb3759ea25402ec76ae213",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 20,
+      "event_date": "2026-06-17",
+      "information_cutoff": "2026-06-17T23:59:59+01:00",
+      "category": "Automotive manufacturing, electrification and corporate restructuring",
+      "sources": [
+        {
+          "url": "https://media.jlr.com/corporate/news/2026/06/jlr-sets-out-path-double-digit-revenue-growth-through-greater-propulsion-flexibility",
+          "title": "JLR sets out path to double digit revenue growth through greater propulsion flexibility and increased focus on North America",
+          "published_date": "2026-06-17",
+          "role": "event primary",
+          "claims_supported": "Propulsion options, US focus, cost savings and investment commitment."
+        },
+        {
+          "url": "https://media.jlr.com/corporate/news/2026/05/jlr-delivers-significantly-improved-q4-performance-challenging-year",
+          "title": "JLR delivers significantly improved Q 4 performance in challenging year",
+          "published_date": "2026-05-14",
+          "role": "prior primary financial results",
+          "claims_supported": "Revenue, margins, cash flow, liquidity and reported pressures."
+        },
+        {
+          "url": "https://media.jlr.com/corporate/news/2026/04/jlr-q4-sales-bounce-back-after-cyber-incident",
+          "title": "JLR Q 4 sales bounce back after cyber incident",
+          "published_date": "2026-04-02",
+          "role": "prior primary volume release",
+          "claims_supported": "Preliminary volumes, regional comparisons and product mix."
+        },
+        {
+          "url": "https://www.jlr.com/news/2025/10/jlr-restarts-manufacturing-and-introduces-new-financing-solution-pay-jlr-suppliers",
+          "title": "JLR restarts manufacturing and introduces new financing solution to pay JLR suppliers early",
+          "published_date": "2025-10-07",
+          "role": "prior primary operational release",
+          "claims_supported": "Restart sequence and accelerated supplier payment financing."
+        },
+        {
+          "url": "https://media.jlr.com/corporate/news/2024/09/jlr-invests-ps500-million-creating-ev-factory-future-merseyside",
+          "title": "JLR invests £500 million into creating EV factory of the future in Merseyside",
+          "published_date": "2024-09-26",
+          "role": "prior primary investment announcement",
+          "claims_supported": "Halewood spending, construction, technology and vehicle-platform plans."
+        },
+        {
+          "url": "https://media.jlr.com/corporate/news/2026/05/stellantis-and-jlr-explore-collaboration-synergies-product-development-us",
+          "title": "Stellantis and JLR to explore collaboration synergies for product development in the US",
+          "published_date": "2026-05-20",
+          "role": "prior primary agreement announcement",
+          "claims_supported": "Non-binding MOU scope and conditions for future transactions."
+        },
+        {
+          "url": "https://www.gov.uk/government/consultations/phasing-out-sales-of-new-petrol-and-diesel-cars-from-2030-and-supporting-the-zev-transition/outcome/phasing-out-sales-of-new-petrol-and-diesel-cars-from-2030-and-supporting-the-zev-transition-summary-of-responses-and-joint-government-response",
+          "title": "Phasing out sales of new petrol and diesel cars from 2030 and supporting the ZEV transition: joint government response",
+          "published_date": "2025-04-07",
+          "role": "primary policy background",
+          "claims_supported": "Retained headline transition commitments and proposed compliance flexibilities."
+        }
+      ],
+      "limitations": [
+        "Vehicle volumes explicitly described as preliminary because the April2 company release is used. Policy paragraph describes the dated April2025 response rather than assuming every proposed detail had already taken legal effect.",
+        "The sales paragraph deliberately identifies the April 2 preliminary release. This review did not establish a material difference in subsequently finalized vehicle volumes before June 17; do not treat it as a claim to reproduce every latest company table."
+      ],
+      "information_cutoff_timezone": "Europe/London",
+      "information_cutoff_utc": "2026-06-17T22:59:59+00:00",
+      "Title": "2026-06-17 — Jaguar Land Rover broadens its hybrid strategy and prioritizes North America",
+      "description_word_count": 981,
+      "description_sha256": "cacd7dad9219e38ec7db8d83070a0d4bacf96f2b9a24d7ea94c1ff54606e8e05",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 21,
+      "event_date": "2026-04-23",
+      "information_cutoff": "2026-04-23T23:59:59+02:00",
+      "category": "Government, sanctions and international trade",
+      "sources": [
+        {
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/russia-s-war-of-aggression-against-ukraine-20th-round-of-stern-eu-sanctions-hits-energy-military-industrial-complex-trade-and-financial-services-including-crypto/",
+          "title": "Russia’s war of aggression against Ukraine: 20th round of stern EU sanctions hits energy revenues, military-industrial complex, trade and financial services, including crypto",
+          "published_date": "2026-04-23",
+          "role": "Primary adoption announcement",
+          "claims_supported": "Adoption; 120 listings; 46 additional vessels and total of 632; port restrictions; maritime services prohibition requiring a further activation decision."
+        },
+        {
+          "url": "https://finance.ec.europa.eu/news/eu-adopts-20th-package-sanctions-against-russia-2026-04-23_en",
+          "title": "EU adopts 20th package of sanctions against Russia",
+          "published_date": "2026-04-23",
+          "role": "Primary Commission explanation",
+          "claims_supported": "Restrictions on 20 Russian banks and four other-country financial institutions; five delistings; crypto restrictions; research funding and legal protections."
+        },
+        {
+          "url": "https://www.legal500.com/intelligence/global/international-law/eu-council-adopts-20th-sanctions-package-against-russia",
+          "title": "EU Council Adopts 20th Sanctions Package Against Russia — Steptoe LLP",
+          "published_date": "2026-04-23",
+          "role": "Contemporaneous specialist legal analysis corroborating official rules",
+          "claims_supported": "Goods restrictions; Kyrgyzstan anti-circumvention measure; legal instruments and distinct commencement provisions; 117 Russia and three Belarus listings."
+        },
+        {
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2025/10/23/19th-package-of-sanctions-against-russia-eu-targets-russian-energy-third-country-banks-and-crypto-providers/",
+          "title": "19th package of sanctions against Russia: EU targets Russian energy, third-country banks and crypto providers",
+          "published_date": "2025-10-23",
+          "role": "Primary prior policy context",
+          "claims_supported": "Prior LNG prohibition and transition periods; Rosneft and Gazprom Neft; Mir and SBP restrictions; A7A5-related measures; previous third-country listings."
+        },
+        {
+          "url": "https://www.eeas.europa.eu/delegations/ukraine/statement-president-von-der-leyen-20th-package-sanctions-against-russia_en",
+          "title": "Statement by President von der Leyen on the 20th package of sanctions against Russia",
+          "published_date": "2026-02-06",
+          "role": "Primary proposal prior to adoption",
+          "claims_supported": "February proposal and its three policy areas; proposed shipping-services prohibition coordinated with G7; banks and LNG maintenance; proposal distinguished from adoption."
+        },
+        {
+          "url": "https://www.ksl.com/article/51487500/eu-approves-a-106b-loan-package-to-help-ukraine-after-hungary-lifts-its-veto",
+          "title": "EU approves a $106B loan package to help Ukraine after Hungary lifts its veto — Associated Press",
+          "published_date": "2026-04-23",
+          "role": "Contemporaneous Associated Press report republished by KSL",
+          "claims_supported": "Hungarian and Slovak opposition linked to interrupted Druzhba deliveries, confirmation of resumed deliveries on April 23 and removal of the Hungarian veto.",
+          "availability_note": "KSL displays April 23 publication at noon and update at 12:04 p.m.; the publisher is in Utah. This is before the event cutoff even under the corresponding UTC-6 offset."
+        },
+        {
+          "url": "https://www.consilium.europa.eu/en/european-council/president/x-posts/2026-04-23-172700/",
+          "title": "April 2026 informal meeting of EU heads of state or government: meeting with President of Ukraine",
+          "published_date": "2026-04-23",
+          "role": "Contemporaneous Council presidential statement",
+          "claims_supported": "Cyprus meeting and Zelenskyy attendance on April 23; contemporaneous confirmation of the diplomatic setting."
+        },
+        {
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/23/council-finalises-90-billion-support-loan-to-ukraine/",
+          "title": "Council finalises €90 billion support loan to Ukraine",
+          "published_date": "2026-04-23",
+          "role": "Primary surrounding fiscal decision",
+          "claims_supported": "Separate 2026–27 loan; EU market borrowing and budget-headroom backing; repayment linked to Russian reparations; 24 participating member states; conditionality and earlier February legislation."
+        }
+      ],
+      "limitations": [
+        "The Council press release was reviewed on 27 April to add Official Journal links; the description uses the 23 April announcement and contemporary corroboration.",
+        "The Council and Commission give differing euro aggregates for newly restricted goods; those aggregate values were omitted.",
+        "The package-level figure of 120 listings covers natural and legal persons; Steptoe specifies 117 Russia listings and three Belarus listings.",
+        "The general maritime-services prohibition is not treated as already activated. No subsequent outcomes are included.",
+        "The current Reuters sanctions report was updated April 24 and is excluded. April 23 AP syndication and the Council presidential statement support the diplomatic background."
+      ],
+      "information_cutoff_timezone": "Europe/Brussels",
+      "information_cutoff_utc": "2026-04-23T21:59:59+00:00",
+      "Title": "2026-04-23 — European Union adopts its twentieth sanctions package against Russia",
+      "description_word_count": 913,
+      "description_sha256": "eb5cf98882f05c018f99e38a94d86ab8aa2332687ed54160fee2ef25d94b5ad6",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "This negates hypothetical outcomes not asserted by the event and repeats the activation qualification already explained. Several similar sentences lower factual density. In a forecasting input, repeatedly naming absent outcomes may prime the response. That is a design risk, not empirically demonstrated bias.",
+        "Used accessible same-day AP syndication to verify the pipeline and veto background.",
+        "Replaced an April 24-updated Reuters page with a same-day Council statement."
+      ]
+    },
+    {
+      "number": 22,
+      "event_date": "2026-04-27",
+      "information_cutoff": "2026-04-27T23:59:59+05:30",
+      "category": "Government and bilateral trade agreement",
+      "sources": [
+        {
+          "url": "https://www.beehive.govt.nz/release/historic-nz-india-fta-signed-new-delhi",
+          "title": "Historic NZ-India FTA signed in New Delhi",
+          "published_date": "2026-04-27",
+          "role": "Primary signing announcement",
+          "claims_supported": "Signing parties and date; NZD 3.95 billion two-way trade; tariff coverage; parliamentary process; conditional wine and services most-favoured-nation treatment."
+        },
+        {
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2255914&lang=1&reg=3",
+          "title": "India and New Zealand sign the India–New Zealand Free Trade Agreement",
+          "published_date": "2026-04-27",
+          "role": "Primary Indian signing and terms announcement",
+          "claims_supported": "Bharat Mandapam venue; liberalisation of 70.03 percent of tariff lines versus 95 percent trade coverage; excluded sectors; agricultural productivity plans and joint council; ratification requirement."
+        },
+        {
+          "url": "https://www.beehive.govt.nz/release/legal-verification-india-fta-complete-and-date-signing-agreed",
+          "title": "Legal verification of India FTA complete and date for signing agreed",
+          "published_date": "2026-04-20",
+          "role": "Primary pre-signing status",
+          "claims_supported": "Completion of legal verification; signing date; public and select committee examination; enabling legislation; conditional sequencing of wine and services most-favoured-nation treatment."
+        },
+        {
+          "url": "https://www.beehive.govt.nz/release/mcclay-leads-delegation-india-fta-signing",
+          "title": "McClay leads delegation to India for FTA signing",
+          "published_date": "2026-04-23",
+          "role": "Primary delegation and sector schedules",
+          "claims_supported": "Cross-party delegation and more than 30 businesses; joint business summit; phased seafood, industrial and metal tariffs; fruit quotas."
+        },
+        {
+          "url": "https://www.beehive.govt.nz/release/todd-mcclay-heads-india-trade-negotiations",
+          "title": "Todd McClay heads to India for trade negotiations",
+          "published_date": "2025-12-10",
+          "role": "Primary prior competitive context",
+          "claims_supported": "Minister-reported lamb market shares; 33 percent New Zealand duty versus Australian duty-free access; competing trading agreements."
+        },
+        {
+          "url": "https://www.beehive.govt.nz/release/new-zealand-secures-landmark-free-trade-agreement-india",
+          "title": "New Zealand secures landmark Free Trade Agreement with India",
+          "published_date": "2025-12-22",
+          "role": "Primary prior agreement in substance",
+          "claims_supported": "December conclusion; wine and honey schedules; differentiated dairy access; temporary skilled immigration requirements and non-renewability; retained qualification screening."
+        },
+        {
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2207300&lang=1&reg=6",
+          "title": "India and New Zealand Announce Conclusion of Landmark Free Trade Agreement Negotiations",
+          "published_date": "2025-12-22",
+          "role": "Primary prior Indian economic and services context",
+          "claims_supported": "Five negotiation rounds; USD 1.3 billion merchandise trade in 2024–25; Indian export sectors; 118 services sectors and 139 most-favoured-nation subsectors; post-study and temporary work pathways; access for all Indian tariff lines."
+        },
+        {
+          "url": "https://eveningreport.nz/2026/04/23/chris-hipkins-announces-labour-will-back-india-free-trade-deal/",
+          "title": "Chris Hipkins announces Labour will back India free trade deal — Radio New Zealand republication",
+          "published_date": "2026-04-23",
+          "role": "Contemporaneous parliamentary context",
+          "claims_supported": "Labour support; New Zealand First opposition; National and ACT required parliamentary support; Hipkins’s criticism of the USD 20 billion private investment-promotion commitment over 15 years."
+        }
+      ],
+      "limitations": [
+        "Signature is distinguished from ratification and entry into force. No later implementation date is used.",
+        "Two-way goods and services trade and Indian merchandise figures have different coverage and currencies, explicitly distinguished in the description.",
+        "Officials give differing precise March launch dates; the description uses March 2025 only.",
+        "The investment commitment is not described as a government-funded transfer or completed investment."
+      ],
+      "information_cutoff_timezone": "Asia/Kolkata",
+      "information_cutoff_utc": "2026-04-27T18:29:59+00:00",
+      "Title": "2026-04-27 — India and New Zealand sign a bilateral free trade agreement",
+      "description_word_count": 936,
+      "description_sha256": "1526b9ab55f0afddc46dcb7bf5e554fe7adf41988201a088859ff9f695c70504",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The official wording groups iron, steel and scrap aluminium. Moving scrap to the end makes it appear to modify all three metals. This is avoidable ambiguity rather than a demonstrated false tariff claim.",
+        "Removed a repeated signature-versus-implementation caveat."
+      ]
+    },
+    {
+      "number": 23,
+      "event_date": "2026-05-01",
+      "information_cutoff": "2026-05-01T23:59:59+08:00",
+      "category": "Government, African trade and customs tariffs",
+      "sources": [
+        {
+          "url": "https://gss.mof.gov.cn/gzdt/zhengcefabu/202604/t20260428_3988616.htm",
+          "title": "State Council Customs Tariff Commission Announcement No. 5 of 2026 on zero tariffs for African diplomatic partners",
+          "published_date": "2026-04-28",
+          "role": "Original Chinese legal notice with explicit publication date",
+          "claims_supported": "Twenty non-LDC African diplomatic partners; application from May 1, 2026 through April 30, 2028; country and tariff schedule annex."
+        },
+        {
+          "url": "https://wto.mofcom.gov.cn/xwfb/art/2026/art_c56a101e7dc74ad3a9069222a3be490e.html",
+          "title": "Commerce Ministry WTO Department Q&A on implementation of zero tariffs for 53 African diplomatic partners",
+          "published_date": "2026-04-29",
+          "role": "Primary dated pre-implementation explanation in Chinese",
+          "claims_supported": "Full 20-country list; product-specific previous tariffs; origin and inspection or quarantine qualifications; interim arrangement and partnership negotiations; earlier preferences from 2005."
+        },
+        {
+          "url": "https://english.scio.gov.cn/pressroom/2026-04/29/content_118468904.html",
+          "title": "China to grant zero-tariff treatment to all African countries with diplomatic ties",
+          "published_date": "2026-04-29",
+          "role": "Contemporaneous official publication corroborating legal timing",
+          "claims_supported": "Preferential-rate structure; 20 non-LDC countries; two-year dates; 53 total partners; unilateral policy."
+        },
+        {
+          "url": "https://english.www.gov.cn/policies/policywatch/202605/01/content_WS69f45e35c6d00ca5f9a0ac01.html",
+          "title": "China implements historic zero tariffs for all African nations with diplomatic ties",
+          "published_date": "2026-05-01",
+          "role": "Official event-day implementation and trade background",
+          "claims_supported": "Clearance of 24 tonnes of South African apples; prior coverage of 33 LDCs from 1 December 2024; USD 348 billion trade in 2025; imports of USD 123 billion, up 5.4 percent; continuing partnership negotiations."
+        },
+        {
+          "url": "https://www.chinaafricasps.org/en/xxdt/zcdt/802416371544133.shtml",
+          "title": "GACC Announcement No. 54 of 2026 on origin administration for 20 African non-LDC countries",
+          "published_date": "2026-05-01",
+          "role": "Official customs cooperation portal translation of implementing instrument",
+          "claims_supported": "Existence and scope of origin-administration measures; customs origin distinguished from shipment route."
+        },
+        {
+          "url": "https://apnews.com/article/7da631f9be17069ec92e1d7f432058d7",
+          "title": "China has now dropped tariffs on imports from every African country except 1",
+          "published_date": "2026-05-01",
+          "role": "Independent event-day geographical and trade context",
+          "claims_supported": "Eswatini’s exclusion and ties with Taiwan; 53 of 54 African countries; unilateral two-year measure; existing primary commodity relationship."
+        },
+        {
+          "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202409/t20240906_11486351.html",
+          "title": "Xi Jinping Attends the Opening Ceremony of the Beijing Summit of FOCAC and Delivers a Keynote Address",
+          "published_date": "2024-09-05",
+          "role": "Primary prior cooperation commitments",
+          "claims_supported": "Coverage of 100 percent of tariff lines for 33 African LDCs; SME programme; digital technology centre; 20 digital demonstration and 30 infrastructure projects described as announced programmes."
+        },
+        {
+          "url": "https://www.fmprc.gov.cn/eng/xw/zyxw/202409/t20240905_11485993.html",
+          "title": "Beijing Declaration on Jointly Building an All-Weather China-Africa Community with a Shared Future for the New Era",
+          "published_date": "2024-09-05",
+          "role": "Primary institutional background",
+          "claims_supported": "AfCFTA and Pan-African Payment and Settlement System; agricultural export channels; trade exhibitions; local processing; investment cooperation; development finance and debt distinguished from tariff preferences."
+        },
+        {
+          "url": "https://www.reuters.com/world/asia-pacific/china-implement-zero-tariffs-imports-53-african-countries-2026-02-14/",
+          "title": "China to implement zero-tariffs on imports from 53 African countries",
+          "published_date": "2026-02-14",
+          "role": "Contemporaneous prior public announcement",
+          "claims_supported": "Xi’s announcement at the African Union summit with a 1 May implementation date."
+        }
+      ],
+      "limitations": [
+        "South African customs implementation updates from 8 May and 30 May were excluded because they fall after the cutoff.",
+        "Tariff preferences do not establish completed export growth, new lending or debt cancellation.",
+        "Cooperation-project quantities announced in 2024 are not described as completed projects.",
+        "The original Chinese Finance Ministry notice explicitly displays publication on April 28. The later English rendering is not used to establish pre-cutoff availability."
+      ],
+      "information_cutoff_timezone": "Asia/Shanghai",
+      "information_cutoff_utc": "2026-05-01T15:59:59+00:00",
+      "Title": "2026-05-01 — China extends zero-tariff treatment to twenty additional African trading partners",
+      "description_word_count": 942,
+      "description_sha256": "55d3db22258b8f1eeb006876947cc5099b3b6bfef8a35babe92e117eb2c1dae3",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "This is an analyst-added limit on a single shipment, not additional event information. Similar negative contrasts appear across nearly every paragraph, including imagined debt cancellation and completed facilities. This can overdirect an experimental model toward caution and consumes substantial input space.",
+        "Replaced a later English rendering with the original April 28 legal notice."
+      ]
+    },
+    {
+      "number": 24,
+      "event_date": "2026-05-12",
+      "information_cutoff": "2026-05-12T23:59:59+10:00",
+      "category": "Government, fiscal budget, taxation and housing",
+      "sources": [
+        {
+          "url": "https://budget.gov.au/",
+          "title": "Budget 2026–27",
+          "published_date": "2026-05-12",
+          "role": "Primary budget publication",
+          "claims_supported": "Treasurer delivered the budget on 12 May 2026; budget year and publication status."
+        },
+        {
+          "url": "https://budget.gov.au/content/overview/",
+          "title": "Budget 2026–27 Overview — Resilience and reform",
+          "published_date": "2026-05-12",
+          "role": "Primary surrounding economic context",
+          "claims_supported": "Middle East supply disruption; living-cost, productivity and housing context."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/responsible-economic-and-fiscal-management-0",
+          "title": "Responsible economic and fiscal management",
+          "published_date": "2026-05-12",
+          "role": "Primary fiscal estimates",
+          "claims_supported": "Projected AUD 31.5 billion deficit in 2026–27; AUD 2.8 billion improvement; AUD 63.8 billion savings and reprioritisations; AUD 44.9 billion forecast-period improvement."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/taking-pressure-australians",
+          "title": "Taking pressure off Australians",
+          "published_date": "2026-05-12",
+          "role": "Primary worker-tax and health commitments",
+          "claims_supported": "AUD 250 offset; AUD 1,000 deduction; Medicare levy thresholds; already legislated cuts; AUD 5.9 billion PBS and AUD 1.8 billion urgent care funding."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/tax-reform-workers-businesses-and-future-generations",
+          "title": "Tax reform for workers, businesses and future generations",
+          "published_date": "2026-05-12",
+          "role": "Primary detailed tax and implementation proposals",
+          "claims_supported": "CGT indexation and 30 percent minimum; prospective accrued-gain treatment; negative gearing loss mechanics; trust restructuring relief; legislation and consultation still required."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/more-homes-and-fair-go-first-home-buyers",
+          "title": "More homes and a fair go for first home buyers",
+          "published_date": "2026-05-12",
+          "role": "Primary property-tax and housing details",
+          "claims_supported": "Budget-night grandfathering time; new-build treatment; AUD 2 billion infrastructure and AUD 500 million regional reservation; linked state reforms; foreign investor ban until mid-2029."
+        },
+        {
+          "url": "https://www.abc.net.au/news/2026-05-12/federal-budget-2026-tax-break-for-millions-of-workers/106669972",
+          "title": "$250 tax break for millions of workers in federal budget 2026",
+          "published_date": "2026-05-12",
+          "role": "Independent contemporaneous tax structure explanation",
+          "claims_supported": "Discretionary trust minimum of 30 percent from July 2028; excluded trust types and agricultural income; capital gains and negative gearing definitions."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/backing-small-businesses-tax-relief",
+          "title": "Backing small businesses with tax relief",
+          "published_date": "2026-05-12",
+          "role": "Primary small business measures",
+          "claims_supported": "AUD 20,000 write-off; two-year loss carry-back; AUD 1 billion turnover threshold; AUD 3.5 billion broader business package; 2.7 million small businesses; trust rollover relief."
+        },
+        {
+          "url": "https://ministers.treasury.gov.au/ministers/jim-chalmers-2022/media-releases/budget-backs-innovation-and-investment",
+          "title": "A Budget that backs innovation and investment",
+          "published_date": "2026-05-12",
+          "role": "Primary innovation and public research measures",
+          "claims_supported": "Startup refundability from July 2028; venture incentives from July 2027; R&D changes from July 2028; AUD 387.4 million for CSIRO; AUD 273 million for the National Measurement Institute; proposed science council."
+        }
+      ],
+      "limitations": [
+        "New tax reforms remain proposals requiring legislation; existing legislated income-tax reductions are separately identified.",
+        "Official deficit and budget-balance figures are treated as estimates, not realised fiscal outcomes.",
+        "No RBA monetary report or post-budget market or housing outcomes are used."
+      ],
+      "information_cutoff_timezone": "Australia/Sydney",
+      "information_cutoff_utc": "2026-05-12T13:59:59+00:00",
+      "Title": "2026-05-12 — Australia presents its 2026–27 federal budget and major tax reform proposals",
+      "description_word_count": 935,
+      "description_sha256": "b874225e38484c5ea2a801763a3f493256e83865245f3ab771c98e5c189b5dd5",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "This rebuts an unstated hypothetical and could be replaced with useful details already public. Multiple other paragraphs similarly restate announcement versus enactment.",
+        "Clarified the tax base, accrual date and exemptions for the proposed CGT minimum.",
+        "Removed the now-redundant general explanation of the accrual distinction."
+      ]
+    },
+    {
+      "number": 25,
+      "event_date": "2026-05-15",
+      "information_cutoff": "2026-05-15T23:59:59+08:00",
+      "category": "Government, United States–China trade and investment diplomacy",
+      "sources": [
+        {
+          "url": "https://www.mfa.gov.cn/gjhdq_676201/gjhdqzz_681964/zgzyjz_148218/zyjh_688968/202605/t20260515_11911513.shtml",
+          "title": "Wang Yi briefs the media on the China-US heads-of-state meeting and understandings — original Chinese briefing",
+          "published_date": "2026-05-15",
+          "role": "Original event-day official briefing",
+          "claims_supported": "Trade and investment boards, agricultural market access, reciprocal tariff-reduction framework and details still under consultation.",
+          "availability_note": "Displays May 15 at 22:05. Asia/Shanghai is inferred from the central Chinese government publisher; the page does not print an explicit offset. A separate State Council report displays May 15 at 22:59."
+        },
+        {
+          "url": "https://english.www.gov.cn/news/202605/15/content_WS6a0734b5c6d00ca5f9a0b008.html",
+          "title": "China, U.S. agree to expand two-way trade under reciprocal tariff reduction framework",
+          "published_date": "2026-05-15",
+          "role": "Same-day official corroboration",
+          "claims_supported": "Report dated 15 May at 22:59 independently confirms the trade council, investment council and market-access announcement before the cutoff."
+        },
+        {
+          "url": "https://us.china-embassy.gov.cn/eng/zmgx/zxxx/202605/t20260513_11910072.htm",
+          "title": "China, U.S. hold candid, in-depth, constructive exchanges in South Korea on economic, trade issues, practical cooperation",
+          "published_date": "2026-05-13",
+          "role": "Primary pre-summit negotiation account",
+          "claims_supported": "He Lifeng and Scott Bessent consultations in South Korea; negotiating teams and topics."
+        },
+        {
+          "url": "https://escap.china-mission.gov.cn/eng/zgyw/202605/t20260514_11910330.htm",
+          "title": "President Xi Jinping Holds Talks with U.S. President Donald J. Trump",
+          "published_date": "2026-05-14",
+          "role": "Primary presidential meeting readout",
+          "claims_supported": "Great Hall venue; business delegation; Taiwan position attributed to Xi; agriculture, tourism, health, law enforcement and military communication."
+        },
+        {
+          "url": "https://www.govinfo.gov/content/pkg/DCPD-202500592/html/DCPD-202500592.htm",
+          "title": "Joint Statement by the United States and China on Trade Negotiations in Geneva, Switzerland",
+          "published_date": "2025-05-12",
+          "role": "Primary historical joint statement",
+          "claims_supported": "Suspension of 24 percentage points for 90 days; 10 percentage points retained; April retaliation rollback; continuing discussion mechanism and named officials."
+        },
+        {
+          "url": "https://www.whitehouse.gov/fact-sheets/2025/11/fact-sheet-president-donald-j-trump-strikes-deal-on-economic-and-trade-relations-with-china/",
+          "title": "Fact Sheet: President Donald J. Trump Strikes Deal on Economic and Trade Relations with China",
+          "published_date": "2025-11-01",
+          "role": "Primary prior negotiated commitments",
+          "claims_supported": "October 2025 South Korea meeting; rare-earth and critical-mineral controls; soybean quantities of 12 million tonnes by end-2025 and 25 million annually in 2026–28, treated as commitments rather than verified deliveries."
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2025/november/ustr-suspension-action-section-301-investigation-chinas-targeting-maritime-logistics-and",
+          "title": "USTR Suspension of Action in Section 301 Investigation of China’s Targeting of the Maritime, Logistics, and Shipbuilding Sectors for Dominance",
+          "published_date": "2025-11-09",
+          "role": "Primary prior administrative action",
+          "claims_supported": "One-year suspension effective 10 November 2025; continuing negotiation and domestic shipbuilding work."
+        },
+        {
+          "url": "https://www.supremecourt.gov/opinions/25pdf/24-1287diff_3d9g.pdf",
+          "title": "Learning Resources, Inc. v. Trump — Supreme Court opinion",
+          "published_date": "2026-02-20",
+          "role": "Primary legal background",
+          "claims_supported": "IEEPA does not authorise the President to impose tariffs; historical tariff arrangements are not assumed to be current."
+        },
+        {
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/02/imposing-a-temporary-import-surcharge-to-address-fundamental-international-payments-problems/",
+          "title": "Imposing a Temporary Import Surcharge to Address Fundamental International Payments Problems",
+          "published_date": "2026-02-20",
+          "role": "Primary replacement tariff instrument",
+          "claims_supported": "Section 122 surcharge of 10 percent for 150 days from 24 February; exceptions and interaction with Section 232; described as a February proclamation rather than a summit agreement."
+        },
+        {
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/march/ustr-initiates-section-301-investigations-relating-structural-excess-capacity-and-production",
+          "title": "USTR Initiates Section 301 Investigations Relating to Structural Excess Capacity and Production in Manufacturing Sectors",
+          "published_date": "2026-03-11",
+          "role": "Primary prior ongoing policy process",
+          "claims_supported": "Investigation including China and 15 other economies; statutory question; consultations, submissions and hearings; initiation distinguished from findings."
+        },
+        {
+          "url": "https://www.reuters.com/business/aerospace-defense/trump-says-china-potentially-buy-750-boeing-planes-2026-05-15/",
+          "title": "Trump says China to buy 200 Boeing jets, order could rise up to 750",
+          "published_date": "2026-05-15",
+          "role": "Contemporary commercial announcement",
+          "claims_supported": "Initial 11:19 UTC report of Trump’s statement about approximately 200 planes; no fully specified order or delivery schedule. Later-added US Friday evening interview details are excluded."
+        }
+      ],
+      "limitations": [
+        "The White House fact sheet of 17 May and China Commerce Ministry statement of 16 May are excluded.",
+        "The Reuters article contains later US evening updates on 15 May; only the initial 11:19 UTC material is used, excluding subsequently added 777/737 product details and US market reaction.",
+        "Tariff rates and soybean volumes from 2025 are identified as historical commitments, not assumed current rates or completed purchases.",
+        "No post-cutoff outcomes, signed new tariff schedule or completed aircraft deliveries are asserted.",
+        "The original Chinese Wang Yi briefing displays May 15 at 22:05, before the end-of-day China cutoff. The publisher timezone is inferred rather than printed. A separate State Council report dated May 15 at 22:59 corroborates the announcement."
+      ],
+      "information_cutoff_timezone": "Asia/Shanghai",
+      "information_cutoff_utc": "2026-05-15T15:59:59+00:00",
+      "Title": "2026-05-15 — United States and China announce trade and investment understandings after the Beijing summit",
+      "description_word_count": 916,
+      "description_sha256": "8fd6a23b9f9ccbf6ad2025f2a391f37d27e05cd236bb47cf1f372a9b4c051e9a",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "Used the earlier original Chinese briefing to strengthen cutoff provenance.",
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 26,
+      "event_date": "2026-05-12",
+      "information_cutoff": "2026-05-12T23:59:59-04:00",
+      "category": "Macroeconomic data / inflation / household purchasing power",
+      "sources": [
+        {
+          "url": "https://www.bls.gov/news.release/archives/cpi_05122026.htm",
+          "title": "Consumer Price Index News Release — April 2026",
+          "published_date": "2026-05-12",
+          "role": "Primary event release",
+          "claims_supported": "Release at 08:30 ET. Headline CPI rose 0.6% monthly and 3.8% annually; core CPI rose 0.4% and 2.8%. Energy, food, shelter and other component movements."
+        },
+        {
+          "url": "https://www.bls.gov/news.release/archives/cpi_04102026.htm",
+          "title": "Consumer Price Index News Release — March 2026",
+          "published_date": "2026-04-10",
+          "role": "Primary pre-event comparison and methodology",
+          "claims_supported": "March headline CPI rose 0.9% monthly and 3.3% annually; energy 10.9%, gasoline 21.2%, core 0.2%. CPI-U index 330.213; CPI-W and chained index. Population coverage and definitions."
+        },
+        {
+          "url": "https://www.bls.gov/news.release/archives/empsit_05082026.htm",
+          "title": "Employment Situation News Release — April 2026",
+          "published_date": "2026-05-08",
+          "role": "Primary contemporaneously available labour context",
+          "claims_supported": "Initial April payroll gain of 115,000; unemployment 4.3%, unemployed 7.4 million. Industry employment, participation 61.8%, employment-population ratio 59.1%, long-term unemployment 1.8 million and 25.3%. Separate surveys."
+        },
+        {
+          "url": "https://www.bls.gov/news.release/archives/realer_05122026.htm",
+          "title": "Real Earnings News Release — April 2026",
+          "published_date": "2026-05-12",
+          "role": "Primary simultaneous companion release",
+          "claims_supported": "Real hourly and weekly earnings. Nominal hourly earnings $37.41 and workweek 34.3 hours. Differences in deflators and production/nonsupervisory earnings."
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260429a.htm",
+          "title": "Federal Reserve issues FOMC statement",
+          "published_date": "2026-04-29",
+          "role": "Primary pre-event policy setting",
+          "claims_supported": "Target range 3.50–3.75%. Economic assessment, dual mandate and evidence considered. Distinct dissents by Miran versus Hammack, Kashkari and Logan."
+        },
+        {
+          "url": "https://www.reuters.com/business/us-consumer-prices-increase-further-april-2026-05-12/",
+          "title": "US annual consumer inflation posts largest gain in three years as prices increase broadly",
+          "published_date": "2026-05-12",
+          "role": "Contemporaneous reporting used narrowly",
+          "claims_supported": "Conflict and Strait of Hormuz transport background. Shutdown-related carry-forward rent imputation and April rotating panel. About 73 description words derive from this source; later market and policy outcomes are excluded."
+        }
+      ],
+      "limitations": [
+        "CPI and labour data are original release vintages, not later revisions.",
+        "A contemporary report supplies shelter-imputation context; current BLS explanatory pages updated later were deliberately not used as event-day evidence.",
+        "Headline CPI is not the Federal Reserve’s PCE inflation-target measure; description does not equate them."
+      ],
+      "retrieved_date": "2026-10-17",
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-05-13T03:59:59+00:00",
+      "Title": "2026-05-12 — United States reports April consumer inflation of 3.8 percent",
+      "description_word_count": 937,
+      "description_sha256": "323a850858de1750bafec38b9bdf1bc99ab698abfa2265e159f7101a9ef8def4",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "No actual future outcome is leaked, but this is redundant cutoff boilerplate and explicitly names future outcome categories in the model input. The opening timestamp already sets the boundary."
+      ]
+    },
+    {
+      "number": 27,
+      "event_date": "2026-07-15",
+      "information_cutoff": "2026-07-15T23:59:59+08:00",
+      "category": "Macroeconomic data / Chinese growth / property and consumption",
+      "sources": [
+        {
+          "url": "https://www.stats.gov.cn/english/PressRelease/202607/t20260715_1964120.html",
+          "title": "National Economy Operated within an Appropriate Range with New Growth Drivers Developing Rapidly in the First Half Year",
+          "published_date": "2026-07-15",
+          "role": "Primary event release",
+          "claims_supported": "H1 GDP 69,570.4 billion yuan and 4.7% real growth. Q2 growth 4.3% annually and 0.9% quarterly. Sector totals; H1 industrial growth 5.4%, equipment manufacturing 9.3%, high-tech manufacturing 13.3%."
+        },
+        {
+          "url": "https://www.stats.gov.cn/english/PressRelease/202604/t20260416_1963326.html",
+          "title": "National Economy Got off to a Good Start in the First Quarter",
+          "published_date": "2026-04-16",
+          "role": "Primary earlier-quarter vintage",
+          "claims_supported": "Q1 GDP 33,419.3 billion yuan and 5.0% growth; prior Q4 4.5%. Q1 industrial 6.1%, manufacturing 6.4%, mining 6.0%, utilities 4.3%, services 5.2%, equipment 8.9%, high-tech 12.5%. March PMI 50.4."
+        },
+        {
+          "url": "https://www.stats.gov.cn/english/PressRelease/202606/t20260616_1963952.html",
+          "title": "National Economy Showed Steady Momentum with Innovation-led and High-quality Development in May",
+          "published_date": "2026-06-16",
+          "role": "Primary pre-event demand and investment context",
+          "claims_supported": "May retail sales 4,109.0 billion yuan and decline of 0.6%. Urban/rural and goods/catering differences. January–May investment fell 4.1%, property 16.2%, manufacturing 0.4%; infrastructure grew 0.6%. Building sales area and value."
+        },
+        {
+          "url": "https://english.www.gov.cn/archive/statistics/202607/15/content_WS6a572b59c6d00ca5f9a0c34d.html",
+          "title": "China’s retail sales of goods, services up 2.7 pct in first half of 2026",
+          "published_date": "2026-07-15",
+          "role": "Government-published contemporaneous account of NBS briefing",
+          "claims_supported": "Combined retail growth 2.7%, services 5.3%, goods 1.1%. Narrower consumer-goods sales 24.87 trillion yuan and growth 1.3%; urban/rural 1.2%/2.5%. NEV penetration 62.8%; visa-free entries 17.82 million, up 30.6%."
+        },
+        {
+          "url": "https://www.stats.gov.cn/english/PressRelease/202607/t20260710_1964094.html",
+          "title": "Consumer Price Index in June 2026",
+          "published_date": "2026-07-10",
+          "role": "Primary pre-event prices",
+          "claims_supported": "June CPI 1.0% annually and minus 0.3% monthly; H1 average 1.0%. Food/nonfood, goods/services, pork/eggs, residential and transportation price differences."
+        },
+        {
+          "url": "https://english.www.gov.cn/archive/statistics/202607/14/content_WS6a55c183c6d00ca5f9a0c2da.html",
+          "title": "China’s H1 foreign trade posts 16.9 pct growth with optimized structure",
+          "published_date": "2026-07-14",
+          "role": "Government-published account of Customs data",
+          "claims_supported": "Yuan-denominated H1 merchandise trade 25.47 trillion, up 16.9%; exports 14.73 trillion, up 13.4%; imports 10.74 trillion, up 22.1%."
+        },
+        {
+          "url": "https://www.stats.gov.cn/english/PressRelease/202607/t20260701_1964047.html",
+          "title": "Purchasing Managers’ Index for June 2026",
+          "published_date": "2026-07-01",
+          "role": "Primary survey-method context",
+          "claims_supported": "June manufacturing PMI 50.3, up 0.3 points; survey subindices and diffusion-index calculation."
+        }
+      ],
+      "limitations": [
+        "All quarterly accounts are preliminary as released; detailed English GDP and retail releases dated17July are excluded.",
+        "Trade values use yuan; no substitution of larger dollar-denominated percentage growth rates.",
+        "Combined goods-and-services retail series is distinguished from the narrower consumer-goods series.",
+        "May month-on-month retail changes were revised between releases and are omitted; no later revisions are blended into pre-event data.",
+        "The selection retains June PMI and explicitly dated January–May investment context. It does not reproduce every component of the July 15 release, including its updated first-half investment/property figures; this is a contextual coverage limitation, not a revision or cutoff mismatch."
+      ],
+      "retrieved_date": "2026-10-17",
+      "information_cutoff_timezone": "Asia/Shanghai",
+      "information_cutoff_utc": "2026-07-15T15:59:59+00:00",
+      "Title": "2026-07-15 — China releases first-half GDP growth of 4.7 percent",
+      "description_word_count": 946,
+      "description_sha256": "181aa817d27715e89ffe7372b53d34fd7d13b25c0dbcf385e3eb75448fb44879",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": []
+    },
+    {
+      "number": 28,
+      "event_date": "2026-05-27",
+      "information_cutoff": "2026-05-27T23:59:59-04:00",
+      "category": "Sovereign finance / IMF programme / debt restructuring",
+      "sources": [
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/05/27/pr26172-sri-lanka-imf-completes-combined-5th-and-6th-reviews-under-eff",
+          "title": "IMF Executive Board Completes the Combined Fifth and Sixth Reviews Under the Extended Fund Facility for Sri Lanka",
+          "published_date": "2026-05-27",
+          "role": "Primary event decision",
+          "claims_supported": "Combined reviews completed; SDR 508 million/about US$695 million access; total SDR 1.778 billion/about US$2.4 billion. Criteria, prior actions, import-restriction and arrears nonobservance, debt sustainability and unresolved reforms."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2023/03/20/pr2379-imf-executive-board-approves-under-the-new-eff-arrangement-for-sri-lanka",
+          "title": "IMF Executive Board Approves US$3 Billion Under the New Extended Fund Facility Arrangement for Sri Lanka",
+          "published_date": "2023-03-20",
+          "role": "Primary programme origin",
+          "claims_supported": "Forty-eight-month arrangement of SDR 2.286 billion; first disbursement SDR 254 million/about US$333 million. Crisis conditions and fiscal, monetary, banking, debt and governance requirements."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/07/02/pr24235-sri-lanka-imf-executive-board-completes-the-fourth-review-under-the-eff",
+          "title": "IMF Executive Board Completes the Fourth Review Under the Extended Fund Facility with Sri Lanka",
+          "published_date": "2025-07-03",
+          "role": "Primary previous review",
+          "claims_supported": "Fourth review provided SDR 254 million; cumulative SDR 1.27 billion. Electricity cost recovery, arrears-data problems, corrective reporting and waivers; remaining bilateral creditors and banking governance."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2025/12/19/pr-25436-sri-lanka-imf-approves-us-206-million-in-emergency-financial-support",
+          "title": "IMF Executive Board Approves US$206 Million in Emergency Financial Support for Sri Lanka",
+          "published_date": "2025-12-19",
+          "role": "Primary separate emergency financing and review deferral",
+          "claims_supported": "Cyclone of 28 November 2025, reported deaths/displacement and infrastructure damage. RFI SDR 150.5 million/about US$206 million; fifth-review deferral, public financial management, emergency reporting, prohibition on monetary financing and output below its pre-crisis level."
+        },
+        {
+          "url": "https://www.imf.org/en/news/articles/2026/04/09/pr26113-sri-lanka-imf-staff-reaches-sla-combined-fifth-and-sixth-reviews-under-eff-arrangement",
+          "title": "IMF Staff Reaches Staff-Level Agreement on the Combined Fifth and Sixth Reviews under Sri Lanka’s Extended Fund Facility Arrangement",
+          "published_date": "2026-04-09",
+          "role": "Primary immediate lead-up",
+          "claims_supported": "Mission of 26 March–9 April and conditional staff agreement. Energy pricing and financing-assurance prerequisites. 2025 growth of 5.0%, March inflation of 2.2%, reserves of about US$7 billion. Vehicle-import taxes, airline debt exchange, Middle East exposures and fuel procurement."
+        }
+      ],
+      "limitations": [
+        "The event date follows the IMF announcement in Washington; publication was on 28 May in Sri Lanka.",
+        "The fourth-review URL contains 2 July but the retrieved bibliographic date is 3 July 2025; the description uses July 2025.",
+        "Dollar equivalents change with the SDR conversion rate; SDR 508 million is the unchanged programme amount.",
+        "No remarks from the 28 May press conference or subsequent programme outcomes are included.",
+        "Forecasts in the 27 May release are omitted; programme approval is distinct from completion of all creditor agreements."
+      ],
+      "retrieved_date": "2026-10-17",
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-05-28T03:59:59+00:00",
+      "Title": "2026-05-27 — IMF approves Sri Lanka’s combined fifth and sixth programme reviews",
+      "description_word_count": 906,
+      "description_sha256": "a2883218b92f69602fde3d5247fce34e24bd17b7b7288889bd12bc2431274dfa",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": []
+    },
+    {
+      "number": 29,
+      "event_date": "2026-05-05",
+      "information_cutoff": "2026-05-05T23:59:59+01:00",
+      "category": "Banking / private credit / fraud-related impairment",
+      "sources": [
+        {
+          "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/260505-1q-2026-earnings-release.pdf",
+          "title": "HSBC Holdings plc Earnings Release 1Q26",
+          "published_date": "2026-05-05",
+          "role": "Primary event financial disclosure",
+          "claims_supported": "US$400 million fraud-related secondary securitisation charge; US$1.3 billion total ECL and US$300 million Middle East allowance. Pretax profit US$9.4 billion, revenue US$18.6 billion, unaudited reporting and comparison periods."
+        },
+        {
+          "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/260505-1q-2026-presentation-to-investors-and-analysts.pdf",
+          "title": "HSBC 1Q 2026 Presentation to Investors and Analysts",
+          "published_date": "2026-05-05",
+          "role": "Primary exposure breakdown",
+          "claims_supported": "Slides 15–16 show total private-markets exposure US$111 billion; private-credit-related US$22 billion, of which US$16 billion drawn and US$6 billion committed. Securitisation financing US$3 billion, collateral categories and management-defined perimeter."
+        },
+        {
+          "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2026/1q/pdfs/hsbc-holdings-plc/250506-1q-2026-earnings-release-investors-and-analysts-call-transcript.pdf",
+          "title": "Q1 Results Analyst and Investor Call — Edited transcript",
+          "published_date": "2026-05-05",
+          "role": "Record of public event-day management remarks",
+          "claims_supported": "Public May 5 call: Kaur on exposure, due diligence, counterparty concentration, completed highest-risk-area review and no comparable fraud concerns; CET1 and operating range; Hang Seng transaction and dividend. Statements remain attributed to management."
+        },
+        {
+          "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/annual/pdfs/hsbc-holdings-plc/260225-strategic-report-2025.pdf",
+          "title": "HSBC Holdings plc Strategic Report 2025",
+          "published_date": "2026-02-25",
+          "role": "Primary organisational background",
+          "claims_supported": "Four businesses from January 2025, fifty-six markets, international network and simplification. 2025 revenue about US$68.3 billion, ordinary dividends US$12.9 billion, completed buybacks US$6 billion and total distributions US$18.9 billion."
+        },
+        {
+          "url": "https://www.hsbc.com/-/files/hsbc/investors/hsbc-results/2025/annual/pdfs/hsbc-holdings-plc/260225-annual-report-and-accounts-2025.pdf",
+          "title": "HSBC Holdings plc Annual Report and Accounts 2025",
+          "published_date": "2026-02-25",
+          "role": "Primary accounting and prior balance-sheet context",
+          "claims_supported": "Expected-credit-loss framework, stages and forward-looking assumptions; risk categories. Year-end assets approximately US$3.233 trillion and customer accounts US$1.787 trillion."
+        },
+        {
+          "url": "https://www.reuters.com/business/finance/hsbc-reports-flat-first-quarter-profit-misses-estimates-2026-05-05/",
+          "title": "HSBC shares slump 6% on surprise $400 million hit linked to MFS collapse",
+          "published_date": "2026-05-05",
+          "role": "Contemporaneous attribution of unnamed exposure",
+          "claims_supported": "Two sources link HSBC charge to Apollo-backed Atlas SP and MFS. Atlas reported a £400 million exposure in February; CFO declined to name firms. Relationship is explicitly attributed reporting."
+        },
+        {
+          "url": "https://www.wsj.com/finance/banking/hsbc-posts-flat-quarterly-net-profit-11339e59",
+          "title": "HSBC Takes $400 Million Hit From Private-Credit Alleged Fraud",
+          "published_date": "2026-05-05",
+          "role": "Independent contemporaneous MFS background",
+          "claims_supported": "MFS background as a British specialist property lender; collapse/administration and allegations. No later legal outcome asserted."
+        }
+      ],
+      "limitations": [
+        "The MFS/Atlas identification is attributed reporting, not an official HSBC identification.",
+        "Allegations are not treated as adjudicated findings.",
+        "Pillar3 document is excluded because its filename is dated8May2026 despite being grouped with5Mayresults.",
+        "The transcript documents the5Maypubliccall; its eventual PDF upload date is not asserted.",
+        "Reported andconstant-currency figures are not mixed;provisions are distinguished fromfinalcashrecoveries."
+      ],
+      "retrieved_date": "2026-10-17",
+      "information_cutoff_timezone": "Europe/London",
+      "information_cutoff_utc": "2026-05-05T22:59:59+00:00",
+      "Title": "2026-05-05 — HSBC discloses a US$400 million fraud-related credit charge",
+      "description_word_count": 923,
+      "description_sha256": "87d63aba364eecb8b7c1e47f5dcf1da616181ea4f86998bdbd815d175c50dbc8",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "This is logically cautious but introduces a conjectural negative possibility while omitting management's specific same-day statement that its highest-risk review found no comparable fraud concern. An attributed statement conveys the information then available more faithfully; it need not endorse the assurance as independently proved.",
+        "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      ]
+    },
+    {
+      "number": 30,
+      "event_date": "2026-06-24",
+      "information_cutoff": "2026-06-24T23:59:59-04:00",
+      "category": "Bank supervision / capital adequacy / financial stability",
+      "sources": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260624a.htm",
+          "title": "Federal Reserve Board’s annual bank stress test confirms that large banks are well positioned to weather a severe recession",
+          "published_date": "2026-06-24",
+          "role": "Primary event announcement",
+          "claims_supported": "Release at 16:00 EDT, thirty-two banks above minima and 1.6-point aggregate capital decline. Major loss components and offsetting loan, securities and income factors."
+        },
+        {
+          "url": "https://www.federalreserve.gov/publications/files/2026-dfast-results-20260624.pdf",
+          "title": "2026 Federal Reserve Stress Test Results",
+          "published_date": "2026-06-24",
+          "role": "Primary detailed result tables",
+          "claims_supported": "Actual end-2025 aggregate and individual starting CET1 ratios; conditional projected minima and ending ratios over 2026Q1–2028Q1; 4.5% base regulatory minimum; approximately USD708 billion in total hypothetical losses."
+        },
+        {
+          "url": "https://www.federalreserve.gov/publications/files/2026-final-supervisory-stress-test-scenarios-20260204.pdf",
+          "title": "2026 Final Supervisory Stress Test Scenarios",
+          "published_date": "2026-02-04",
+          "role": "Primary hypothetical scenario definition",
+          "claims_supported": "CRE prices minus 39%, house prices minus 30%, unemployment 10%, equities approximately minus 58%. Global recession, risk appetite, domestic/international variables and explicit statement that scenario paths are not Fed forecasts."
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260204a.htm",
+          "title": "Federal Reserve Board finalizes hypothetical scenarios for its annual stress test and votes to maintain current stress-test-related capital requirements",
+          "published_date": "2026-02-04",
+          "role": "Primary institutional applicability and prior decision",
+          "claims_supported": "Applicability table for global market shock and largest-counterparty default, including custody banks, based on Q3 2025 data. Final market-shock revisions and capital-buffer freeze until 2027."
+        },
+        {
+          "url": "https://www.federalreserve.gov/publications/files/2026-february-supervisory-stress-test-methodology.pdf",
+          "title": "2026 Supervisory Stress Test Methodology — February 2026",
+          "published_date": "2026-02-04",
+          "role": "Primary methodology",
+          "claims_supported": "General reuse of 2025 models; fair-value loss-given-default 50% and corporate-loan equivalent factor 65%; sovereign counterparty exclusions and credit-card sharing-agreement adjustments."
+        },
+        {
+          "url": "https://www.federalreserve.gov/publications/files/large-bank-capital-requirements-20260624.pdf",
+          "title": "Large Bank Capital Requirements — June 2026",
+          "published_date": "2026-06-24",
+          "role": "Primary contemporaneous capital requirement publication",
+          "claims_supported": "Existing buffers retain 2025 values; new entrants receive 2.5% buffers. Requirements maintained until 2027; covered holding companies with US$100 billion asset threshold and statutory testing framework."
+        }
+      ],
+      "limitations": [
+        "The press-release webpage was corrected on 2 July 2026 to remove the erroneous word \"loan\" before \"total losses\". The description uses the 24 June results PDF to identify US$708 billion as total losses and imports no subsequent financial outcome.",
+        "Scenario losses, projected capital ratios and macroeconomic paths are hypothetical. Starting capital ratios are observed end-2025 values. The 4.5% base CET1 minimum is distinct from individual total requirements including buffers.",
+        "The 2026 results did not reset stress-capital buffers; later payout announcements are excluded.",
+        "Scenario modelling is the event itself here; it is explicitly distinguished from predictions of actual post-event outcomes."
+      ],
+      "retrieved_date": "2026-10-17",
+      "information_cutoff_timezone": "America/New_York",
+      "information_cutoff_utc": "2026-06-25T03:59:59+00:00",
+      "Title": "2026-06-24 — Federal Reserve publishes results of its annual large-bank stress test",
+      "description_word_count": 969,
+      "description_sha256": "d79790dec1dc342dcf2c4b3eabcc8b63993ee4adefd1a01f1404509e67da7f0c",
+      "review_status": "Reviewed; corrections applied where indicated; residual limitations retained.",
+      "reviewed_on": "2026-10-17",
+      "review_changes": [
+        "The results PDF says nearly $708bn, while the press page says more than. No need to choose a directional inequality across the official-source discrepancy.",
+        "The antecedent includes actual end-2025 starting ratios as well as hypothetical minima. The source table labels the starting ratios actual. Apply the conditional-estimate language only to projections.",
+        "Official shorthand is defensible, but adjacent discussion of requirements in force can invite confusing the 4.5% base minimum with complete buffered requirements.",
+        "Redundant future-category enumeration; no actual future outcome is disclosed."
+      ]
+    }
+  ],
+  "review": {
+    "reviewed_on": "2026-10-17",
+    "scope": "All 30 descriptions were read paragraph by paragraph, with event anchors, context sources, numerical definitions, source vintages and future-outcome wording checked. This is a reasoned source audit, not a guarantee that every underlying publication is error-free.",
+    "baseline_dataset_sha256": "cef98e97ea34974fff16d05b0babd544b635ebe1e70c845018c10f4ed5fe5888",
+    "description_records_changed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      29,
+      30
+    ],
+    "source_records_changed": [
+      3,
+      6,
+      8,
+      13,
+      18,
+      21,
+      23,
+      25
+    ],
+    "changes": [
+      {
+        "number": 1,
+        "kind": "description",
+        "change": "Unnecessary investment-outcome caveat. It does not document an event-day fact beyond the preceding institutional description. This is not a factual error or later-outcome leak."
+      },
+      {
+        "number": 2,
+        "kind": "description",
+        "change": "Fourth-quarter changes can be read as quarter-on-quarter changes. The SEP defines growth and inflation from Q4 of the preceding year to Q4 of the projected year."
+      },
+      {
+        "number": 3,
+        "kind": "description",
+        "change": "This unadjusted employee count follows two seasonally adjusted unemployment measures without explicitly marking the change in adjustment basis."
+      },
+      {
+        "number": 4,
+        "kind": "description",
+        "change": "The 4.8% projection is year-ended inflation. After discussion of both monthly and quarterly inflation, omitting the annual comparison could cause a mistaken quarter-on-quarter reading."
+      },
+      {
+        "number": 5,
+        "kind": "description",
+        "change": "Generic textbook exposition repeats P1–P3 and adds little event-specific information. No factual defect or later outcome is present."
+      },
+      {
+        "number": 3,
+        "kind": "source",
+        "change": "Added the original dated e-Stat CPI record to corroborate the monthly digest."
+      },
+      {
+        "number": 11,
+        "kind": "description",
+        "change": "The paragraph names the same four operational dependencies twice and repeats the assessment framing. No factual contradiction, but it reads as word-count padding. Replace the whole paragraph with the supplied nonduplicative version."
+      },
+      {
+        "number": 13,
+        "kind": "source",
+        "change": "Replaced the misdated January draft with the May 12 pre-markup text EHF26374."
+      },
+      {
+        "number": 13,
+        "kind": "description",
+        "change": "This future-exclusion list is redundant with the explicit cutoff and the preceding statement that the legislative process remained incomplete. It does not disclose an actual outcome, but deleting it produces a cleaner contemporaneous model input."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "The 70% ceiling is the steady-state calibration, not an unconditional ceiling for all systemic issuers at every stage. The same June22 policy expressly retains a step-up allowance of up to95% government debt for systemic-at-launch firms. The press release itself summarizes70%, so this is a precision improvement rather than a wrong headline number."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "Added the published temporary 95% step-up allowance for issuers systemic at launch."
+      },
+      {
+        "number": 15,
+        "kind": "description",
+        "change": "Even though it denies assuming an outcome, the list introduces suspension, migrations and competitor gains as salient later consequence categories. The competitor-gains framing is particularly directional and unnecessary for a neutral contemporaneous input. Remove the sentence; no new filler is required. This is outcome priming, not proof that a later fact was explicitly disclosed."
+      },
+      {
+        "number": 15,
+        "kind": "description",
+        "change": "The retrieved Reuters text and its same-day Euronext republication say one of the world’s largest crypto companies, not the world’s largest crypto exchange. The broader characterization may be independently true, but this sentence attributes it specifically to this Reuters report; align that attribution with the actual source."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "Removed repeated general explanation after the policy perimeter was already stated."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "Removed a general restatement after the concrete redemption and safeguarding provisions."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "Tightened repeated context wording."
+      },
+      {
+        "number": 14,
+        "kind": "description",
+        "change": "Tightened repeated context wording."
+      },
+      {
+        "number": 3,
+        "kind": "source",
+        "change": "Added original May 29 e-Stat Tokyo CPI table."
+      },
+      {
+        "number": 6,
+        "kind": "source",
+        "change": "Removed a Reuters page whose current version was updated April 18, after the April 17 cutoff; contemporaneous Reuters and ICS evidence remains."
+      },
+      {
+        "number": 7,
+        "kind": "description",
+        "change": "The November 24 ADNOC release identifies these as the UAE’s conventional reserve base, rather than an ADNOC-only owned reserve inventory. The sentence does not expressly say the company owns all these reserves, but its immediate ADNOC framing leaves an avoidable attribution ambiguity."
+      },
+      {
+        "number": 8,
+        "kind": "source",
+        "change": "Replaced inaccessible third-party mirror with the verified original official USDA ESMIS PDF."
+      },
+      {
+        "number": 16,
+        "kind": "description",
+        "change": "Corrected platform-update chronology; the initial Rubin launch preceded March 16."
+      },
+      {
+        "number": 18,
+        "kind": "description",
+        "change": "Replaced preliminary company figures with audited FY2025 and April 30 Q1 figures, preserving cash-flow exclusions and growth-comparison bases."
+      },
+      {
+        "number": 18,
+        "kind": "description",
+        "change": "Added the pre-cutoff March 23 foodpanda Taiwan disposal agreement and retained its approval condition."
+      },
+      {
+        "number": 18,
+        "kind": "description",
+        "change": "Clarified the measurement proxy in the combined transaction presentation."
+      },
+      {
+        "number": 18,
+        "kind": "source",
+        "change": "Replaced the preliminary February trading update with the final March annual-results release."
+      },
+      {
+        "number": 18,
+        "kind": "source",
+        "change": "Added the April 30 operating update available before the July takeover announcement."
+      },
+      {
+        "number": 21,
+        "kind": "description",
+        "change": "This negates hypothetical outcomes not asserted by the event and repeats the activation qualification already explained. Several similar sentences lower factual density. In a forecasting input, repeatedly naming absent outcomes may prime the response. That is a design risk, not empirically demonstrated bias."
+      },
+      {
+        "number": 22,
+        "kind": "description",
+        "change": "The official wording groups iron, steel and scrap aluminium. Moving scrap to the end makes it appear to modify all three metals. This is avoidable ambiguity rather than a demonstrated false tariff claim."
+      },
+      {
+        "number": 23,
+        "kind": "description",
+        "change": "This is an analyst-added limit on a single shipment, not additional event information. Similar negative contrasts appear across nearly every paragraph, including imagined debt cancellation and completed facilities. This can overdirect an experimental model toward caution and consumes substantial input space."
+      },
+      {
+        "number": 24,
+        "kind": "description",
+        "change": "This rebuts an unstated hypothetical and could be replaced with useful details already public. Multiple other paragraphs similarly restate announcement versus enactment."
+      },
+      {
+        "number": 22,
+        "kind": "description",
+        "change": "Removed a repeated signature-versus-implementation caveat."
+      },
+      {
+        "number": 24,
+        "kind": "description",
+        "change": "Clarified the tax base, accrual date and exemptions for the proposed CGT minimum."
+      },
+      {
+        "number": 24,
+        "kind": "description",
+        "change": "Removed the now-redundant general explanation of the accrual distinction."
+      },
+      {
+        "number": 21,
+        "kind": "source",
+        "change": "Used accessible same-day AP syndication to verify the pipeline and veto background."
+      },
+      {
+        "number": 21,
+        "kind": "source",
+        "change": "Replaced an April 24-updated Reuters page with a same-day Council statement."
+      },
+      {
+        "number": 23,
+        "kind": "source",
+        "change": "Replaced a later English rendering with the original April 28 legal notice."
+      },
+      {
+        "number": 25,
+        "kind": "source",
+        "change": "Used the earlier original Chinese briefing to strengthen cutoff provenance."
+      },
+      {
+        "number": 26,
+        "kind": "description",
+        "change": "No actual future outcome is leaked, but this is redundant cutoff boilerplate and explicitly names future outcome categories in the model input. The opening timestamp already sets the boundary."
+      },
+      {
+        "number": 29,
+        "kind": "description",
+        "change": "This is logically cautious but introduces a conjectural negative possibility while omitting management's specific same-day statement that its highest-risk review found no comparable fraud concern. An attributed statement conveys the information then available more faithfully; it need not endorse the assurance as independently proved."
+      },
+      {
+        "number": 30,
+        "kind": "description",
+        "change": "The results PDF says nearly $708bn, while the press page says more than. No need to choose a directional inequality across the official-source discrepancy."
+      },
+      {
+        "number": 30,
+        "kind": "description",
+        "change": "The antecedent includes actual end-2025 starting ratios as well as hypothetical minima. The source table labels the starting ratios actual. Apply the conditional-estimate language only to projections."
+      },
+      {
+        "number": 30,
+        "kind": "description",
+        "change": "Official shorthand is defensible, but adjacent discussion of requirements in force can invite confusing the 4.5% base minimum with complete buffered requirements."
+      },
+      {
+        "number": 30,
+        "kind": "description",
+        "change": "Redundant future-category enumeration; no actual future outcome is disclosed."
+      },
+      {
+        "number": 16,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      },
+      {
+        "number": 17,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      },
+      {
+        "number": 19,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      },
+      {
+        "number": 20,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      },
+      {
+        "number": 25,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      },
+      {
+        "number": 29,
+        "kind": "description",
+        "change": "Removed redundant negative future-outcome framing; event-day status and cutoff remain explicit."
+      }
+    ],
+    "remaining_limits": [
+      "Event 3: the original April Labour Force Survey numerical release was not independently recovered; concordant English and Japanese JILPT digests identify the underlying May 29 publication. Original national CPI, Tokyo CPI and job-ratio releases are separately corroborated.",
+      "Event 9: the primary FY2025 Canal page has no visible publication date; contemporaneous dated republication corroborates its pre-cutoff availability.",
+      "Live web pages do not constitute immutable historical snapshots. Where update histories are ambiguous, this audit uses contemporaneous independent corroboration and records the limitation.",
+      "These are curated briefings rather than exhaustive event-day news sets. Some older data are intentionally dated historical context; not every contemporaneous statistic is included.",
+      "Model training cutoffs, a fixed forecast-evaluation horizon and independent outcome adjudication remain experimental-method requirements, not properties that JSON validation can establish."
+    ]
+  }
+}
