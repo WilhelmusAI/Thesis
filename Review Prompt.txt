@@ -1,0 +1,275 @@
+You are assisting with the evaluation of a bachelor’s thesis experiment comparing language models that generate recursive consequence trees from financial events.
+
+Evaluate the attached run carefully and produce a downloadable JSON file containing the original generated consequences, branch-level assessments, supporting evidence, source links and explanations. Do not return an Excel file.
+
+## 1. Research task and inputs
+
+The attached files contain:
+
+- An Excel workbook with the generated consequences, tree structure and run metadata.
+- An events JSON containing the original financial-event descriptions.
+
+Each complete run should contain two children per node across five generated layers, producing 62 generated nodes and 32 complete root-to-leaf branches. Each node contains five sentences, so each complete branch contains 25 generated sentences.
+
+Verify these counts against the workbook. Report discrepancies rather than silently repairing or inventing content.
+
+Identify the correct event using the workbook’s metadata and the events JSON. Recover the model, event number, iteration, information cutoff and forecast horizon from the supplied files. Do not assume missing settings. If a necessary setting cannot be recovered, identify what is missing before assigning final assessments.
+
+The evaluation unit is the **complete five-node branch**. Assess individual claims and transitions as supporting diagnostics, then apply the branch-level rules below.
+
+The study measures two separate things:
+
+1. **Historical evidence support** — whether the predicted sequence and its required components are supported by documented developments.
+2. **Conditional consequence plausibility** — whether each consequence could reasonably follow from the original event and the preceding hypothetical consequences.
+
+Do not combine these criteria into one overall score.
+
+## 2. Preserve the generated output
+
+Preserve all original node identifiers, parent relationships and sentences verbatim.
+
+Do not improve, simplify or rewrite a prediction before evaluating it. A concise explanation may accompany the original text, but must not replace it.
+
+Read all five sentences in every node. Consider outcomes, entities, direction, magnitude, timing, scope, necessary conditions and explicitly asserted causal connections.
+
+Separate new predictions from repetitions of the supplied event. Repeating the root event does not count as a successfully supported prediction.
+
+Shared nodes should be assessed consistently. Reuse a shared node’s assessment across descendant branches when its preceding context is identical. Assess each later transition using its complete preceding path.
+
+## 3. Assess conditional plausibility before researching outcomes
+
+First assess plausibility using the original event, preceding generated consequences and established knowledge available at the information cutoff.
+
+Treat earlier generated consequences as hypothetical premises when assessing the next transition. Do not reject a later consequence merely because an earlier consequence did not happen historically.
+
+However, accepting preceding consequences does not automatically justify the next consequence.
+
+Record the initial plausibility assessments before retrieving post-event outcome evidence. Do not claim that this ordering was followed unless it actually was. If outcome evidence has already been seen, disclose that limitation.
+
+Apply the following definitions without substituting a different scale.
+
+### Rating 1 — Strongly disagree
+
+At least one transition directly conflicts with an applicable premise or established constraint. The conflict remains even when preceding generated consequences are accepted as hypothetical assumptions.
+
+Examples:
+
+- A payment is explicitly said to occur after receipt of an invoice, but its specified date precedes the invoice date.
+- The scenario states that a loan’s interest rate is fixed throughout the period, but the branch predicts that a policy-rate change directly changes that contractual rate during the same period.
+
+Identify the exact conflicting statements or constraint.
+
+### Rating 2 — Disagree
+
+No decisive contradiction warrants Rating 1, but at least one transition cannot reasonably be justified without a substantial unsupported assumption or a necessary missing mechanism.
+
+Examples:
+
+- A modest reduction in interest expenditure is said to eliminate every source of a company’s default risk, without addressing other obligations or business risks.
+- A reduction in mortgage applications is said to cause unrelated corporate borrowers to receive credit-rating downgrades, without explaining a connecting exposure or mechanism.
+
+Identify the substantial assumption or essential missing mechanism. Do not assign Rating 2 merely because a consequence is uncertain or does not necessarily follow.
+
+### Rating 3 — Unsure
+
+No identified failure warrants Rating 1 or 2, but ambiguity or insufficient information prevents a confident judgment about at least one essential transition.
+
+Examples:
+
+- An existing loan is predicted to reprice next month, but its fixed or variable status and reset date are unspecified.
+- Currency depreciation is predicted to increase an importer’s payment, but the invoice currency and relevant exchange-rate protection are unspecified.
+
+Explain which missing information would resolve the uncertainty.
+
+### Rating 4 — Agree
+
+Every transition is reasonably plausible under the stated assumptions. No essential reasoning link is missing, although some mechanisms remain implicit and rely on standard background knowledge.
+
+Examples:
+
+- A permitted variable-rate loan reset increases repayments, reduces disposable income, prompts a discretionary purchase to be postponed, lowers expected retail sales and leads to smaller replenishment orders.
+- A port closure delays a shipment, exhausts the stated limited stock buffer, creates a stockout, prompts some customers to choose available substitutes and reduces sales of the unavailable product.
+
+A plausible consequence need not be inevitable. Ordinary mechanisms need not all be explained from first principles.
+
+### Rating 5 — Strongly agree
+
+Every transition is reasonably plausible and clearly justified. Relevant mechanisms, temporal ordering and necessary conditions are specified without contradiction or an essential reasoning gap.
+
+Examples:
+
+- A contractual loan reset leads to a correctly specified instalment calculation, a larger required payment, an explicit household budget adjustment and a corresponding reduction in planned discretionary spending.
+- A shipment delay exceeds specified inventory coverage, creates a dated stockout, triggers an available substitution option, prompts customers with stated compatible requirements to switch and changes the product mix of sales.
+
+### Plausibility aggregation
+
+Apply the first applicable definition from Rating 1 upwards across the branch. A defective transition cannot be offset by stronger reasoning elsewhere.
+
+Identify the determining transition and sentence. If several transitions determine the same rating, identify the earliest and list the others where useful.
+
+Keep these distinctions clear:
+
+- Missing historical evidence does not make a transition implausible.
+- Uncertainty about whether an outcome will occur does not itself justify Rating 2.
+- Rating 3 represents an indeterminate assessment.
+- Ratings 4 and 5 do not require proof that the sequence happened.
+- Historical contradictions must not automatically replace an independently assessed plausibility rating.
+
+## 4. Research historical evidence
+
+After recording plausibility assessments, research the predicted developments within the run’s observation window.
+
+Search for both supporting and contradicting evidence. Prefer official statistics, original institutional publications, company disclosures, exchange records and other primary sources. Use reliable secondary reporting where appropriate.
+
+Open and inspect sources used as evidence. Search snippets alone are insufficient for a final factual finding.
+
+For each source, distinguish:
+
+- Publication date.
+- Date or period of the reported observation.
+- The exact fact established.
+- Which predicted component it addresses.
+- Relevant limitations.
+
+Later publications may verify observations that occurred within the window. A publication released within the window may describe earlier events and therefore fail to verify a new prediction.
+
+Do not treat whole-quarter or whole-month statistics as exact matches for narrower dates or populations without adequate justification.
+
+Do not select whichever market subperiod happens to agree with a prediction. Follow its specified timing and comparator. If these are ambiguous, record the ambiguity and use a consistent declared convention.
+
+Use public evidence appropriate to the claim. Do not automatically require private customer records or internal documents when official notices, contractual terms or other adequate evidence establish the relevant component. Conversely, do not assume that undocumented internal actions occurred.
+
+An explicitly claimed causal connection requires evidence addressing that connection. Mere co-occurrence is insufficient. Clearly attribute causal explanations offered by sources and distinguish them from established observations or your own inference.
+
+## 5. Historical evidence categories
+
+### Supported
+
+Evidence establishes every required component of the proposed sequence, including its explicit qualifications. No component is contradicted or remains unresolved.
+
+Examples:
+
+- Dated notices, contractual terms, calculations and transaction records establish a named bank’s rate increase, customer notification, instalment recalculation, revised billing and subsequent payment, including the asserted connections.
+- Records establish a shipment cancellation, activation of a replacement clause, replacement dispatch, additional freight payment and delivery on the predicted date.
+
+### Partially supported
+
+Evidence establishes at least one required component, while at least one other component remains unresolved. No required component is contradicted.
+
+Identify both the supported and unresolved components.
+
+Examples:
+
+- A bank’s rate increase and specified repayment changes are confirmed, while subsequent household spending, retailer ordering and supplier production changes remain unresolved.
+- An airline’s fuel-cost increase and surcharge are confirmed, while the predicted booking decline and flight reductions remain unresolved.
+
+Partial support does not mean that most of the branch happened. A branch with one confirmed component may qualify.
+
+### Refuted
+
+Evidence establishes that at least one required component conflicts with documented developments or fails an explicit qualification under the predefined matching rules.
+
+This verdict takes precedence over partial support.
+
+Examples:
+
+- A branch predicts an exact 50-basis-point increase, while the named institution documents an exact 25-basis-point increase for the same decision.
+- A branch predicts no trading in a specified asset on a specified exchange during an exact interval, while authenticated records show executed trades during that interval.
+
+Absence of evidence alone must never produce Refuted.
+
+### Not supported
+
+Available evidence establishes neither support nor contradiction for any required predicted component.
+
+Identify the evidence limitation.
+
+Examples:
+
+- A branch describes five internal company decisions, but no available records establish or contradict any of them.
+- A branch describes an unidentified fund’s portfolio and hedging actions, but no sufficiently specific transaction or holdings evidence is available.
+
+This category does not mean that the branch is false.
+
+## 6. Evidence-matching safeguards
+
+Apply the same standards throughout the run.
+
+- Preserve the entity, population, instrument, date and measure when matching evidence.
+- Do not substitute estate-agent satisfaction for buyer sentiment, general confidence for spending, applications for completed loans, or an auction schedule for successful issuance.
+- Do not count a broad thematic resemblance as a supported component.
+- A supported subcomponent must be genuinely asserted in the original prediction, not created by removing its defining subject or meaning.
+- Background facts and root-event repetitions do not establish new predicted outcomes.
+- Separate the policy rate, commercial prime rate, loan interest rate, bond coupon and market yield.
+- Do not invent numerical tolerances for words such as “approximately,” “slightly” or “significantly.”
+- If wording has multiple reasonable interpretations that materially change a verdict, flag the ambiguity and report the sensitivity. Do not silently choose the interpretation producing a preferred result.
+- Distinguish an unresolved claim from a confirmed contradiction.
+
+Do not target a particular distribution of grades. Zero fully supported branches is permissible. Do not raise or lower scores to make the results appear more balanced or useful.
+
+## 7. JSON deliverable
+
+Create one downloadable, valid JSON file.
+
+Use the exact supplied ZIP basename when available. Otherwise recover the run identifier from workbook metadata and explain that naming basis. Preserve model and quantisation identifiers exactly.
+
+Example filenames:
+
+- Qwen3.5-4B_event_03_iteration_03.json
+- Qwen3.5-122B-A10B_event_05_iteration_03.json
+
+Include these sections:
+
+**run_metadata**
+Run identifier, model, event, iteration, input filenames, evaluation date, information cutoff, observation window, evaluator identity if reliably available, and any missing or conflicting metadata.
+
+**evaluation_protocol**
+The rubric used, matching conventions, assessment order, deviations and unresolved methodological choices.
+
+**original_event**
+The matching event number, title and original description.
+
+**nodes**
+All 62 generated nodes, preserving original sentences and parent relationships. Include component-level evidence assessments and transition-level plausibility assessments. Use stable identifiers for claims and evidence.
+
+**branches**
+All 32 complete branches, each containing:
+
+- Branch identifier and ordered node path.
+- Historical verdict.
+- Specific supported, contradicted and unresolved components.
+- Evidence references for supported and contradicted findings.
+- Explanation of why the branch receives that verdict.
+- Plausibility rating and justification.
+- Determining transition and sentence.
+- Important ambiguities or limitations.
+
+Store each original node once and reference it from branches, ensuring that every complete branch can be reconstructed without losing text.
+
+**sources**
+For each source, include its identifier, title, publisher, direct URL, publication date where available, observation period, access date, relevant facts and precise locators where possible. Give each fact its own identifier and link it to the claims it supports or contradicts.
+
+Keep contextual sources distinguishable from direct evidence.
+
+**summary**
+Include counts and percentages for all four historical categories and all five plausibility ratings, plus the proportion rated 4 or 5. Explain important shared-node effects. Do not combine the two criteria into an overall score or describe partial support as an accuracy percentage.
+
+**limitations_and_review**
+Record unavailable evidence, inaccessible sources, ambiguous matches, uncertain dates, potentially influential judgments and outstanding human verification. Do not claim independent human validation, blinding or reliability testing unless these actually occurred.
+
+## 8. Final checks
+
+Before delivering the file:
+
+- Verify all expected nodes and branches are present.
+- Verify original text has been preserved.
+- Check every evidence reference resolves to an included fact and source.
+- Recalculate distributions from the individual branch assessments.
+- Confirm historical verdicts follow the required precedence.
+- Confirm plausibility aggregation follows the first-applicable definition.
+- Confirm shared claims receive consistent assessments.
+- Flag discrepancies rather than concealing them.
+
+Return the downloadable JSON and a brief summary of the distributions and major limitations. Do not return an Excel workbook.
+
+Treat this as a rigorous preliminary AI-assisted evaluation requiring researcher verification, and report uncertainty honestly.
